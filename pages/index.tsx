@@ -187,6 +187,71 @@ const Home: NextPage = () => {
                         <div className="img"></div>
                     </div>
                 </section>
+                <section id="team" className="team-wrapper">
+                    <h1>Team</h1>
+                    <div className="content">
+                        <div className="profile">
+                            <div className="img"></div>
+                            <p className="title">
+                                <b>Eden</b>
+                                <br />
+                                <small>Developer</small>
+                            </p>
+                            <p className="description">
+                                adam 캐릭터의 배경이 되었습니다. <br />
+                                ntf 수집을 좋아합니다.
+                            </p>
+                        </div>
+                        <div className="profile">
+                            <div className="img"></div>
+                            <p className="title">
+                                <b>Dotty</b>
+                                <br />
+                                <small>Artist</small>
+                            </p>
+                            <p className="description">
+                                미쳤습니다. 괴상한 그의 손가락에선 어떤 것이 나올 지 모릅니다.
+                                <br /> 젤리를 좋아합니다.
+                            </p>
+                        </div>
+                        <div className="profile">
+                            <div className="img"></div>
+                            <p className="title">
+                                <b>Mada</b>
+                                <br />
+                                <small>Advisor</small>
+                            </p>
+                            <p className="description">
+                                adam x ego의 고문을 담당합니다.
+                                <br /> 정말 고통스럽게 합니다.
+                            </p>
+                        </div>
+                        <div className="profile">
+                            <div className="img"></div>
+                            <p className="title">
+                                <b>Gabriel</b>
+                                <br />
+                                <small>Marketer</small>
+                            </p>
+                            <p className="description">
+                                평화를 좋아합니다. <br />
+                                언제 모든 인류가 평화롭길 원합니다.
+                            </p>
+                        </div>
+                        <div className="profile">
+                            <div className="img"></div>
+                            <p className="title">
+                                <b>Lucifer</b>
+                                <br />
+                                <small>Marketer</small>
+                            </p>
+                            <p className="description">
+                                언제나 악마같은 냉혹함을 토대로 nft, 블록체인 및 실물자산등 투자를
+                                전문으로 합니다.
+                            </p>
+                        </div>
+                    </div>
+                </section>
             </MainWrapper>
 
             <FooterWrapper>
@@ -228,6 +293,12 @@ const HeaderWrapper = styled.header`
         justify-content: space-between;
         align-items: center;
 
+        ${md} {
+            width: 85%;
+            padding: 0;
+            margin: 0;
+        }
+
         > div {
             display: inline-flex;
             flex-flow: row nowrap;
@@ -238,6 +309,7 @@ const HeaderWrapper = styled.header`
 
             ${md} {
                 font-size: 0.875rem;
+                gap: 0.5rem;
             }
         }
 
@@ -258,14 +330,7 @@ const HeaderWrapper = styled.header`
 
             ${md} {
                 font-size: 0.75rem;
-            }
-        }
-
-        ${md} {
-            padding: 0;
-
-            > div {
-                gap: 0.875rem;
+                padding-right: 0.125rem;
             }
         }
     }
@@ -543,26 +608,77 @@ const MainWrapper = styled.div`
             grid-template-columns: 1fr 1fr 1fr 1fr;
             gap: 1rem;
 
-            padding: 0 2.5rem;
+            padding: 0 12.5rem;
 
             .img {
                 width: 100%;
                 height: 200px;
-                background: url("https://via.placeholder.com/256") no-repeat center/cover;
+                background: url("../static/img/sample.png") no-repeat center/contain;
             }
             ${md} {
                 grid-template-columns: 1fr 1fr;
-                padding: 0;
+                padding: 0 2rem;
 
                 .img {
                     height: 8rem;
-                    background: url("https://via.placeholder.com/128") no-repeat center/cover;
+                    background: url("../static/img/sample.png") no-repeat center/contain;
                 }
             }
         }
 
         ${md} {
             padding: 4rem 0;
+        }
+    }
+
+    .team-wrapper {
+        border-top: 1px solid #f5c631;
+        padding: 3rem 1.25rem;
+
+        position: relative;
+
+        ${md} {
+            padding: 3rem 0;
+        }
+
+        .content {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            gap: 1rem;
+
+            ${md} {
+                grid-template-columns: 1fr 1fr;
+            }
+            .profile {
+                display: inline-flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                gap: 0.875rem;
+
+                .img {
+                    background: url("https://via.placeholder.com/180") no-repeat center/cover;
+                    width: 100%;
+                    height: 11.25rem;
+                }
+
+                .title {
+                    font-size: 1.25rem;
+                    text-align: center;
+                    ${md} {
+                        font-size: 1rem;
+                    }
+                }
+
+                .description {
+                    font-size: 1rem;
+                    text-align: center;
+                    word-break: keep-all;
+                    ${md} {
+                        font-size: 0.875rem;
+                    }
+                }
+            }
         }
     }
 `;
