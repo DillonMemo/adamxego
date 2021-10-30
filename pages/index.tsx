@@ -235,7 +235,7 @@ const Home: NextPage = () => {
                             </p>
                             <p className="description">
                                 평화를 좋아합니다. <br />
-                                언제 모든 인류가 평화롭길 원합니다.
+                                언제나 모든 인류가 평화롭길 원합니다.
                             </p>
                         </div>
                         <div className="profile">
@@ -657,9 +657,9 @@ const MainWrapper = styled.div`
                 gap: 0.875rem;
 
                 .img {
-                    background: url("https://via.placeholder.com/180") no-repeat center/cover;
+                    background: url("https://via.placeholder.com/224") no-repeat center/cover;
                     width: 100%;
-                    height: 11.25rem;
+                    height: 14rem;
                 }
 
                 .title {
