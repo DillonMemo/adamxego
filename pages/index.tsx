@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styled, { keyframes } from "styled-components";
-import { MAX_WIDTH, md } from "../styles/styles";
+import { lg, MAX_WIDTH, md, xl } from "../styles/styles";
 
 const LangOptions = [
     { value: "ko", label: "KO" },
@@ -60,7 +60,7 @@ const Home: NextPage = () => {
 
             <MainWrapper>
                 <section className="thumbnail-wrapper">
-                    <div className="img"></div>
+                    <img src="../static/img/main.png" alt="main" />
                 </section>
                 <section className="arrow-wrapper">
                     <div className="arrow-right">
@@ -75,31 +75,28 @@ const Home: NextPage = () => {
                 <section id="about" className="about-wrapper">
                     <div className="about">
                         <div>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta a magni
-                            neque numquam, unde, labore temporibus recusandae maxime tempora ex
-                            porro aut tempore animi architecto distinctio cum. Molestias similique
-                            quis quos odit numquam doloribus ex omnis culpa? Totam temporibus amet,
-                            corporis a quasi laudantium commodi, sequi in omnis earum doloribus
-                            recusandae illum eligendi vero nisi sed reprehenderit, dignissimos
-                            repellendus. Sequi sunt repellat iusto, quaerat expedita natus
-                            reiciendis facere libero ad? Modi distinctio corrupti et sapiente
-                            laudantium sed iste, amet fugit.
+                            <p style={{ fontSize: "1.5rem", marginBottom: "1rem" }}>히스토리</p>
+                            <p style={{ fontSize: "1.25rem", lineHeight: "1.5" }}>
+                                아담이 apple을 한입 베어 무는 순간, 어떤 일이 펼쳐질 지 그는 전혀
+                                짐작 하지 못했다. 아담 후손의 ego는 선과 악으로 나뉘었고, 아담은
+                                후손들의 ego를 더 이상 컨트롤 할 수 없게 되면서 선과 악을 따르는
+                                추종자들의 역사가 시작되었다. 그리고 선과 악의 대립은 결국 전쟁의
+                                서사를 쓰게 된다.
+                            </p>
                         </div>
                         <div className="img"></div>
                     </div>
                     <div className="about reverse">
                         <div className="img"></div>
                         <div>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat
-                            voluptatum commodi itaque unde nihil. Velit consequatur neque voluptatum
-                            laborum illum aut nihil quidem eum dignissimos, perspiciatis, id
-                            molestias corrupti nostrum! Maxime quo porro quaerat numquam
-                            necessitatibus. Quis dolor a beatae reiciendis, rerum repellendus
-                            distinctio maxime quibusdam architecto doloribus voluptatem eveniet
-                            laudantium officia? Qui exercitationem nulla quaerat, ratione
-                            voluptatibus facilis placeat eaque fugiat delectus nihil minus
-                            recusandae! Dolor nisi autem reiciendis voluptatibus incidunt at earum
-                            blanditiis, fugit quis doloribus. Repudiandae, atque.
+                            <p style={{ fontSize: "1.5rem", marginBottom: "1rem" }}>Adam</p>
+                            <p style={{ fontSize: "1.25rem", lineHeight: "1.5" }}>
+                                576개의 pixel로 이루어지고 고유의 item을 장착한 generative art
+                                ‘아담스이고’는 각각 다른 10,000명으로 탄생한 고유의 인물입니다.
+                                5,000명의 선한 정체성, 5,000명의 악한 정체성으로 탄생한
+                                ‘아담스이고’는 클레이튼 블록체인에서 공식적으로 소유할 수 있습니다.
+                                각각의 아담은 착용한 아이템에 따라 레벨이 정해집니다.
+                            </p>
                         </div>
                     </div>
                     <div className="about">
@@ -197,10 +194,10 @@ const Home: NextPage = () => {
                                 <br />
                                 <small>Developer</small>
                             </p>
-                            <p className="description">
+                            {/* <p className="description">
                                 adam 캐릭터의 배경이 되었습니다. <br />
                                 ntf 수집을 좋아합니다.
-                            </p>
+                            </p> */}
                         </div>
                         <div className="profile">
                             <div className="img"></div>
@@ -209,10 +206,10 @@ const Home: NextPage = () => {
                                 <br />
                                 <small>Artist</small>
                             </p>
-                            <p className="description">
+                            {/* <p className="description">
                                 미쳤습니다. 괴상한 그의 손가락에선 어떤 것이 나올 지 모릅니다.
                                 <br /> 젤리를 좋아합니다.
-                            </p>
+                            </p> */}
                         </div>
                         <div className="profile">
                             <div className="img"></div>
@@ -221,10 +218,10 @@ const Home: NextPage = () => {
                                 <br />
                                 <small>Advisor</small>
                             </p>
-                            <p className="description">
+                            {/* <p className="description">
                                 adam x ego의 고문을 담당합니다.
                                 <br /> 정말 고통스럽게 합니다.
-                            </p>
+                            </p> */}
                         </div>
                         <div className="profile">
                             <div className="img"></div>
@@ -233,10 +230,10 @@ const Home: NextPage = () => {
                                 <br />
                                 <small>Marketer</small>
                             </p>
-                            <p className="description">
+                            {/* <p className="description">
                                 평화를 좋아합니다. <br />
                                 언제나 모든 인류가 평화롭길 원합니다.
-                            </p>
+                            </p> */}
                         </div>
                         <div className="profile">
                             <div className="img"></div>
@@ -245,10 +242,10 @@ const Home: NextPage = () => {
                                 <br />
                                 <small>Marketer</small>
                             </p>
-                            <p className="description">
+                            {/* <p className="description">
                                 언제나 악마같은 냉혹함을 토대로 nft, 블록체인 및 실물자산등 투자를
                                 전문으로 합니다.
-                            </p>
+                            </p> */}
                         </div>
                     </div>
                 </section>
@@ -280,6 +277,8 @@ const HeaderWrapper = styled.header`
 
     position: fixed;
     z-index: 1;
+
+    background-color: #000000;
 
     > .header {
         max-width: ${MAX_WIDTH};
@@ -352,15 +351,9 @@ const MainWrapper = styled.div`
     }
 
     .thumbnail-wrapper {
-        .img {
-            background: url("https://via.placeholder.com/1280x640") no-repeat center/cover;
+        img {
+            object-fit: contain;
             width: 100%;
-            height: 40rem;
-
-            ${md} {
-                background: url("https://via.placeholder.com/400x128") no-repeat center/cover;
-                height: 8rem;
-            }
         }
     }
 
