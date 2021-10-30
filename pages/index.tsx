@@ -278,7 +278,7 @@ const HeaderWrapper = styled.header`
     position: fixed;
     z-index: 1;
 
-    background-color: #000000;
+    background-color: rgba(18, 18, 18, 1);
 
     > .header {
         max-width: ${MAX_WIDTH};
