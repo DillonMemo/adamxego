@@ -237,7 +237,7 @@ const Home: NextPage = () => {
                                 cy="50%"
                                 innerRadius={50}
                                 outerRadius={90}
-                                label={({ percent }) => `${(percent * 100).toFixed(0)}%`}
+                                label={({ percent }) => `TEXT ${(percent * 100).toFixed(0)}%`}
                                 labelLine={false}
                             >
                                 {data.map((_, index) => (
