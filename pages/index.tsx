@@ -213,7 +213,7 @@ const Home: NextPage = () => {
                         <div className="img"></div>
                         <div className="img"></div>
                         <div className="img"></div>
-                        <div className="img" id="team"></div>
+                        <div className="img"></div>
                     </div>
                 </section>
                 <section className="chart-wrapper">
@@ -228,7 +228,7 @@ const Home: NextPage = () => {
                         nihil animi. Obcaecati nihil ipsa laudantium accusamus sit, rem iste quas,
                         doloribus sunt pariatur dolorum.
                     </div>
-                    <ResponsiveContainer width="100%" height="100%">
+                    <ResponsiveContainer width="100%" height="100%" id="team">
                         <PieChart width={400} height={400}>
                             <Pie
                                 data={data}
@@ -346,6 +346,10 @@ const HeaderWrapper = styled.header`
 
     background-color: rgba(18, 18, 18, 1);
 
+    ${md} {
+        padding: 0 1rem;
+    }
+
     > .header {
         max-width: ${MAX_WIDTH};
         width: 100%;
@@ -359,7 +363,6 @@ const HeaderWrapper = styled.header`
         align-items: center;
 
         ${md} {
-            width: 85%;
             padding: 0;
             margin: 0;
         }
@@ -396,6 +399,8 @@ const HeaderWrapper = styled.header`
             ${md} {
                 font-size: 0.75rem;
                 padding-right: 0.125rem;
+                background-color: #ffffff;
+                color: #000000;
             }
         }
     }
@@ -405,6 +410,10 @@ const MainWrapper = styled.div`
     max-width: ${MAX_WIDTH};
     margin: 0 auto;
     padding-top: 3.75rem;
+
+    ${md} {
+        padding: 3.75rem 1rem 0;
+    }
 
     section > h1 {
         margin-bottom: 5rem;
@@ -699,10 +708,13 @@ const MainWrapper = styled.div`
         display: grid;
         grid-template-columns: 1.25fr 0.75fr;
         align-items: center;
-        min-height: 30rem;
 
         ${md} {
             grid-template-columns: 1fr;
+        }
+
+        > div:last-child {
+            min-height: 20rem;
         }
     }
 
@@ -763,6 +775,10 @@ const FooterWrapper = styled.footer`
     margin: 0 auto;
     text-align: center;
     padding: 3rem 0;
+
+    ${md} {
+        padding: 3rem 1rem;
+    }
 `;
 
 export default Home;

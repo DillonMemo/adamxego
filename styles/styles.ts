@@ -32,9 +32,6 @@ export const GlobalStyles = createGlobalStyle`
         background: ${({ theme }: any) => theme.body};
         color: ${({ theme }) => theme.text};
         /* transition: background 0.2s ease-in, color 0.2s ease-in; */
-        ${md} {
-          padding: 0 1rem;
-        }
     }
     /* 모든 폰트가 'Noto Sans KR'에서 영문과 숫자만 'Roboto'로 적용 */
     /* @font-face {
