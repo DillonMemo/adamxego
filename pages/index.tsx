@@ -3,15 +3,47 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styled, { keyframes } from "styled-components";
-import { lg, MAX_WIDTH, md, xl } from "../styles/styles";
+import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from "recharts";
+import { MAX_WIDTH, md } from "../styles/styles";
+import { ReactElement } from "react";
 
-const LangOptions = [
-    { value: "ko", label: "KO" },
-    { value: "en", label: "EN" },
+const data = [
+    { name: "A1", value: 100 },
+    { name: "B1", value: 100 },
+    { name: "C1", value: 100 },
+    { name: "D1", value: 150 },
 ];
+const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
+const RADIAN = Math.PI / 180;
 
 const Home: NextPage = () => {
     const router = useRouter();
+
+    const renderCustomizedLabel = ({
+        cx,
+        cy,
+        midAngle,
+        innerRadius,
+        outerRadius,
+        percent,
+    }: any): JSX.Element => {
+        console.log(cx, cy, percent);
+        const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+        const x = cx + radius * Math.cos(-midAngle * RADIAN);
+        const y = cy + radius * Math.sin(-midAngle * RADIAN);
+
+        return (
+            <text
+                x={x}
+                y={y}
+                fill="white"
+                textAnchor={x > cx ? "start" : "end"}
+                dominantBaseline="central"
+            >
+                {`${(percent * 100).toFixed(0)}%`}
+            </text>
+        );
+    };
     return (
         <>
             <Head>
@@ -35,7 +67,7 @@ const Home: NextPage = () => {
                         <Link href="#gallery">
                             <a>Gallery</a>
                         </Link>
-                        <Link href="#">
+                        <Link href="#team">
                             <a>Team</a>
                         </Link>
                         <div>
@@ -69,10 +101,10 @@ const Home: NextPage = () => {
                     </div>
                     <div className="arrow-left">
                         <span className="percentage">00%</span>
-                        <div className="img"></div>
+                        <div className="img" id="about"></div>
                     </div>
                 </section>
-                <section id="about" className="about-wrapper">
+                <section className="about-wrapper">
                     <div className="about">
                         <div>
                             <p style={{ fontSize: "1.5rem", marginBottom: "1rem" }}>히스토리</p>
@@ -111,10 +143,10 @@ const Home: NextPage = () => {
                             reiciendis facere libero ad? Modi distinctio corrupti et sapiente
                             laudantium sed iste, amet fugit.
                         </div>
-                        <div className="img"></div>
+                        <div className="img" id="roadmap"></div>
                     </div>
                 </section>
-                <section id="roadmap" className="roadmap-wrapper">
+                <section className="roadmap-wrapper">
                     <h1>Roadmap</h1>
                     <div className="content">
                         <div className="item">
@@ -155,7 +187,7 @@ const Home: NextPage = () => {
                         </div>
                         <div className="item">
                             <div className="img"></div>
-                            <div className="text">
+                            <div className="text" id="gallery">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
                                 reprehenderit enim aliquid, id, ipsa culpa quam excepturi ea eveniet
                                 tempora impedit! Vero, consectetur! Nobis facilis fugit ipsam
@@ -164,7 +196,7 @@ const Home: NextPage = () => {
                         </div>
                     </div>
                 </section>
-                <section id="gallery" className="gallery-wrapper">
+                <section className="gallery-wrapper">
                     <div className="content">
                         <div className="img"></div>
                         <div className="img"></div>
@@ -181,10 +213,44 @@ const Home: NextPage = () => {
                         <div className="img"></div>
                         <div className="img"></div>
                         <div className="img"></div>
-                        <div className="img"></div>
+                        <div className="img" id="team"></div>
                     </div>
                 </section>
-                <section id="team" className="team-wrapper">
+                <section className="chart-wrapper">
+                    <div>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam unde
+                        reprehenderit maxime quidem, delectus molestias veniam? Quae odit iure eaque
+                        eum autem incidunt aperiam sunt, neque odio illum nemo nobis voluptatem
+                        ducimus dolores enim molestiae commodi impedit corrupti non animi alias
+                        quidem delectus doloremque accusamus! Temporibus sed voluptates aliquid
+                        obcaecati doloribus modi explicabo, facilis soluta consequuntur alias
+                        officiis maxime voluptatum possimus assumenda dignissimos est exercitationem
+                        nihil animi. Obcaecati nihil ipsa laudantium accusamus sit, rem iste quas,
+                        doloribus sunt pariatur dolorum.
+                    </div>
+                    <ResponsiveContainer width="100%" height="100%">
+                        <PieChart width={400} height={400}>
+                            <Pie
+                                data={data}
+                                dataKey="value"
+                                cx="50%"
+                                cy="50%"
+                                innerRadius={50}
+                                outerRadius={90}
+                                label={({ percent }) => `${(percent * 100).toFixed(0)}%`}
+                                labelLine={false}
+                            >
+                                {data.map((_, index) => (
+                                    <Cell
+                                        key={`cell-${index}`}
+                                        fill={COLORS[index % COLORS.length]}
+                                    />
+                                ))}
+                            </Pie>
+                        </PieChart>
+                    </ResponsiveContainer>
+                </section>
+                <section className="team-wrapper">
                     <h1>Team</h1>
                     <div className="content">
                         <div className="profile">
@@ -621,6 +687,22 @@ const MainWrapper = styled.div`
 
         ${md} {
             padding: 4rem 0;
+        }
+    }
+
+    .chart-wrapper {
+        border-top: 1px solid #f5c631;
+        padding: 4rem 1.25rem;
+
+        position: relative;
+
+        display: grid;
+        grid-template-columns: 1.25fr 0.75fr;
+        align-items: center;
+        min-height: 30rem;
+
+        ${md} {
+            grid-template-columns: 1fr;
         }
     }
 
