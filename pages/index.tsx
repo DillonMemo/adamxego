@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import styled, { keyframes } from "styled-components";
 import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from "recharts";
 import { MAX_WIDTH, md } from "../styles/styles";
-import { ReactElement } from "react";
+import { Discord, Kakaotalk, Twitter } from "../utils/icons";
 
 const data = [
     { name: "A1", value: 100 },
@@ -321,6 +321,23 @@ const Home: NextPage = () => {
             <FooterWrapper>
                 <p>
                     Powered by <span>© 2021 Adam X Ego Team. All rights reserved.</span>
+                </p>
+                <p className="icon-container">
+                    <Link href="#">
+                        <a>
+                            <Discord width="1.5rem" height="1.5rem" />
+                        </a>
+                    </Link>
+                    <Link href="#">
+                        <a>
+                            <Kakaotalk width="1.5rem" height="1.5rem" />
+                        </a>
+                    </Link>
+                    <Link href="#">
+                        <a>
+                            <Twitter width="1.5rem" height="1.5rem" />
+                        </a>
+                    </Link>
                 </p>
             </FooterWrapper>
         </>
@@ -798,6 +815,14 @@ const FooterWrapper = styled.footer`
 
     ${md} {
         padding: 3rem 1rem;
+    }
+
+    .icon-container {
+        margin-top: 1rem;
+
+        > * + * {
+            margin-left: 1rem;
+        }
     }
 `;
 
