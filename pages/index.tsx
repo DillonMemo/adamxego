@@ -132,66 +132,67 @@ const Home: NextPage = () => {
                         </div>
                     </div>
                     <div className="about">
-                        <div>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta a magni
-                            neque numquam, unde, labore temporibus recusandae maxime tempora ex
-                            porro aut tempore animi architecto distinctio cum. Molestias similique
-                            quis quos odit numquam doloribus ex omnis culpa? Totam temporibus amet,
-                            corporis a quasi laudantium commodi, sequi in omnis earum doloribus
-                            recusandae illum eligendi vero nisi sed reprehenderit, dignissimos
-                            repellendus. Sequi sunt repellat iusto, quaerat expedita natus
-                            reiciendis facere libero ad? Modi distinctio corrupti et sapiente
-                            laudantium sed iste, amet fugit.
+                        <div style={{ lineHeight: "1.5" }}>
+                            <h1 style={{ marginBottom: "1.5rem" }}>War System</h1>
+                            <p style={{ fontSize: "1.25rem", lineHeight: "1.5" }}>
+                                - Rule 일정 시간까지 총 volume이 높은 ego team이 승리합니다. 매회
+                                배틀이 종료된 뒤 token 응모를 통해 전리품을 얻을 수 있습니다.
+                            </p>
+                            <p style={{ fontSize: "1.25rem", lineHeight: "1.5" }}>
+                                - Token분배 전쟁에 참여하는 1adam당 1apple token 지급
+                            </p>
+                            <p style={{ fontSize: "1.25rem", lineHeight: "1.5" }}>
+                                - Ceremony 우승한 ego team에게 전리품 응모 권한이 생깁니다. 소유한
+                                token 최대 갯수만큼 응모할 수 있습니다. (전리품은 매 전쟁 시작전에
+                                공지 됩니다.)
+                            </p>
+                            <p style={{ fontSize: "1.25rem", lineHeight: "1.5" }}>
+                                - buyback (커뮤니티 쪽에서 언급) 일정 수량의 nft를 바이백 하여 추후
+                                에어드랍으로 증정
+                            </p>
                         </div>
-                        <div className="img" id="roadmap"></div>
                     </div>
                 </section>
                 <section className="roadmap-wrapper">
-                    <h1>Roadmap</h1>
+                    <h1 style={{ marginBottom: "1rem" }}>Roadmap</h1>
+                    <p style={{ marginBottom: "2.5rem", lineHeight: "1.5" }}>
+                        Adam x Ego 로드맵은 각 목표 단계에 도달하면 다음 단계를 진행하는 것입니다.
+                        <br />
+                        또한 장기적인 프로젝트를 목표로 하고 있습니다.
+                        <br /> 매 단계마다 목표를 실행하기 위해 ego-team을 구성하세요.
+                    </p>
                     <div className="content">
                         <div className="item">
-                            <div className="img"></div>
                             <div className="text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-                                reprehenderit enim aliquid, id, ipsa culpa quam excepturi ea eveniet
-                                tempora impedit! Vero, consectetur! Nobis facilis fugit ipsam
-                                laudantium aspernatur. Earum!
+                                <h3>애플토큰</h3>
+                                <p>
+                                    애플토큰을 활용한 로터리 시스템 개발 애플토큰은 향후 모든
+                                    아담스이고 프로젝트에서 사용 될 예정
+                                </p>
                             </div>
                         </div>
                         <div className="item">
-                            <div className="img"></div>
                             <div className="text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-                                reprehenderit enim aliquid, id, ipsa culpa quam excepturi ea eveniet
-                                tempora impedit! Vero, consectetur! Nobis facilis fugit ipsam
-                                laudantium aspernatur. Earum!
+                                <h3>홀더 우대</h3>
+                                <p>홀더 기반 거버넌스 커뮤니티 투표 시스템 개발</p>
                             </div>
                         </div>
                         <div className="item">
-                            <div className="img"></div>
                             <div className="text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-                                reprehenderit enim aliquid, id, ipsa culpa quam excepturi ea eveniet
-                                tempora impedit! Vero, consectetur! Nobis facilis fugit ipsam
-                                laudantium aspernatur. Earum!
+                                <h3>기부</h3>
+                                <p>매 분기마다 일정 수익을 기부 (단체 정하기)</p>
                             </div>
                         </div>
                         <div className="item">
-                            <div className="img"></div>
                             <div className="text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-                                reprehenderit enim aliquid, id, ipsa culpa quam excepturi ea eveniet
-                                tempora impedit! Vero, consectetur! Nobis facilis fugit ipsam
-                                laudantium aspernatur. Earum!
+                                <h3>협업</h3>
+                                <p>타 프로젝트 팀과 콜라보 혹은 파트너쉽 체결</p>
                             </div>
                         </div>
                         <div className="item">
-                            <div className="img"></div>
                             <div className="text" id="gallery">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-                                reprehenderit enim aliquid, id, ipsa culpa quam excepturi ea eveniet
-                                tempora impedit! Vero, consectetur! Nobis facilis fugit ipsam
-                                laudantium aspernatur. Earum!
+                                <h3>V2</h3>
+                                <p>버젼 2를 통한 생태계 확장과 글로벌 시장</p>
                             </div>
                         </div>
                     </div>
@@ -596,6 +597,16 @@ const MainWrapper = styled.div`
                     height: 15rem;
                 }
             }
+
+            &:last-child {
+                grid-template-columns: 1fr;
+
+                padding: 0 2rem;
+
+                ${md} {
+                    padding: 0;
+                }
+            }
         }
 
         .reverse {
@@ -650,7 +661,16 @@ const MainWrapper = styled.div`
 
                 .text {
                     text-align: center;
-                    word-break: break-all;
+                    word-break: keep-all;
+                    line-height: 1.5;
+
+                    > h3 {
+                        margin-bottom: 1rem;
+                    }
+
+                    > p {
+                        line-height: 1.5;
+                    }
                 }
             }
 
