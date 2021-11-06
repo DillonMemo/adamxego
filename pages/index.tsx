@@ -57,7 +57,7 @@ const Home: NextPage = () => {
                     <div className="start">
                         <Link href="#">
                             <a>
-                                <h2>ADAM X EGO</h2>
+                                <h2 className="logo">ADAM X EGO</h2>
                             </a>
                         </Link>
                     </div>
@@ -413,6 +413,12 @@ const HeaderWrapper = styled.header`
             ${md} {
                 font-size: 0.875rem;
                 gap: 0.5rem;
+            }
+        }
+
+        .logo {
+            ${md} {
+                font-size: 0.875rem;
             }
         }
 
