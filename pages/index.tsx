@@ -156,7 +156,7 @@ const Home: NextPage = () => {
                             <p style={{ fontSize: "1rem", lineHeight: "1.5" }}>
                                 - Token distribution 전쟁에 참여하는 1 Adam 당 1 Apple token 지급
                             </p>
-                            <p style={{ fontSize: "1rem", lineHeight: "1.5" }}>
+                            <p id="roadmap" style={{ fontSize: "1rem", lineHeight: "1.5" }}>
                                 - Ceremony 우승한 Ego team 에게는 전리품 응모 권한이 생깁니다.
                                 소유한 Token 최대 갯수만큼 응모할 수 있습니다. (전리품은 매 전쟁
                                 시작 전에 공지 됩니다.)
