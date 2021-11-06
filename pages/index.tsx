@@ -55,7 +55,11 @@ const Home: NextPage = () => {
             <HeaderWrapper>
                 <div className="header">
                     <div className="start">
-                        <h2>Logo</h2>
+                        <Link href="#">
+                            <a>
+                                <h2>ADAM X EGO</h2>
+                            </a>
+                        </Link>
                     </div>
                     <div className="end">
                         <Link href="#about">
