@@ -97,77 +97,87 @@ const Home: NextPage = () => {
                 <section className="arrow-wrapper">
                     <div className="arrow-right">
                         <span className="percentage">00%</span>
-                        <div className="img"></div>
+                        {/* <div className="img"></div> */}
+                        <h2>Good</h2>
                     </div>
                     <div className="arrow-left">
                         <span className="percentage">00%</span>
-                        <div className="img" id="about"></div>
+                        {/* <div className="img" id="about"></div> */}
+                        <h2>Evil</h2>
                     </div>
                 </section>
                 <section className="about-wrapper">
                     <div className="about">
                         <div>
-                            <p style={{ fontSize: "1.5rem", marginBottom: "1rem" }}>히스토리</p>
-                            <p style={{ fontSize: "1.25rem", lineHeight: "1.5" }}>
-                                아담이 apple을 한입 베어 무는 순간, 어떤 일이 펼쳐질 지 그는 전혀
-                                짐작 하지 못했다. 아담 후손의 ego는 선과 악으로 나뉘었고, 아담은
-                                후손들의 ego를 더 이상 컨트롤 할 수 없게 되면서 선과 악을 따르는
-                                추종자들의 역사가 시작되었다. 그리고 선과 악의 대립은 결국 전쟁의
-                                서사를 쓰게 된다.
+                            <h1 style={{ fontSize: "1.25rem", marginBottom: "1rem" }}>
+                                {router.locale === "ko" ? "History" : ""}
+                            </h1>
+                            <p style={{ fontSize: "1rem", lineHeight: "1.5" }}>
+                                {router.locale === "ko" ? (
+                                    <>
+                                        아담이 사과를 한 입 베어 무는 순간, 어떤 일이 펼쳐질 지 그는
+                                        전혀 짐작하지 못했다.
+                                        <br /> 그 사과로 인해 아담의 후손들의 Ego는 선과 악으로
+                                        나뉘었고, 더이상 Ego를 통제 할 수 없게 되면서 선과 악을
+                                        따르는 추종자들의 역사가 시작되었다.
+                                        <br /> 그리고 선과 악의 대립은 결국 전쟁의 서사를 쓰게 된다.
+                                    </>
+                                ) : (
+                                    <>Hello World</>
+                                )}
                             </p>
                         </div>
-                        <div className="img"></div>
+                        {/* <div className="img"></div> */}
                     </div>
                     <div className="about reverse">
-                        <div className="img"></div>
+                        {/* <div className="img"></div> */}
                         <div>
-                            <p style={{ fontSize: "1.5rem", marginBottom: "1rem" }}>Adam</p>
-                            <p style={{ fontSize: "1.25rem", lineHeight: "1.5" }}>
-                                576개의 pixel로 이루어지고 고유의 item을 장착한 generative art
-                                ‘아담스이고’는 각각 다른 10,000명으로 탄생한 고유의 인물입니다.
-                                5,000명의 선한 정체성, 5,000명의 악한 정체성으로 탄생한
-                                ‘아담스이고’는 클레이튼 블록체인에서 공식적으로 소유할 수 있습니다.
-                                각각의 아담은 착용한 아이템에 따라 레벨이 정해집니다.
+                            <h1 style={{ fontSize: "1.25rem", marginBottom: "1rem" }}>Adam</h1>
+                            <p style={{ fontSize: "1rem", lineHeight: "1.5" }}>
+                                576개의 Pixel로 이루어지고 고유의 Item을 장착한 Generative art ‘Adam
+                                X Ego’는 각각 다른 10,000명으로 탄생한 고유의 인물입니다.
+                                <br /> 5,000명의 선한 정체성, 5,000명의 악한 정체성으로 탄생한 ‘Adam
+                                X Ego’는 클레이튼 블록체인에서 공식적으로 소유할 수 있습니다.
+                                <br /> 각각의 아담은 착용한 아이템에 따라 랭크가 정해집니다.
                             </p>
                         </div>
                     </div>
                     <div className="about">
                         <div style={{ lineHeight: "1.5" }}>
-                            <h1 style={{ marginBottom: "1.5rem" }}>War System</h1>
-                            <p style={{ fontSize: "1.25rem", lineHeight: "1.5" }}>
-                                - Rule 일정 시간까지 총 volume이 높은 ego team이 승리합니다. 매회
-                                배틀이 종료된 뒤 token 응모를 통해 전리품을 얻을 수 있습니다.
+                            <h1 style={{ marginBottom: "1.25rem" }}>War System</h1>
+                            <p style={{ fontSize: "1rem", lineHeight: "1.5" }}>
+                                - Rule 일정 시간까지 총 Volume 이 높은 Ego team 이 승리 합니다. 매
+                                전쟁이 종료된 뒤 Token 응모를 통해 전리품을 획득할 수 있습니다.
                             </p>
-                            <p style={{ fontSize: "1.25rem", lineHeight: "1.5" }}>
-                                - Token분배 전쟁에 참여하는 1adam당 1apple token 지급
+                            <p style={{ fontSize: "1rem", lineHeight: "1.5" }}>
+                                - Token distribution 전쟁에 참여하는 1 Adam 당 1 Apple token 지급
                             </p>
-                            <p style={{ fontSize: "1.25rem", lineHeight: "1.5" }}>
-                                - Ceremony 우승한 ego team에게 전리품 응모 권한이 생깁니다. 소유한
-                                token 최대 갯수만큼 응모할 수 있습니다. (전리품은 매 전쟁 시작전에
-                                공지 됩니다.)
+                            <p style={{ fontSize: "1rem", lineHeight: "1.5" }}>
+                                - Ceremony 우승한 Ego team 에게는 전리품 응모 권한이 생깁니다.
+                                소유한 Token 최대 갯수만큼 응모할 수 있습니다. (전리품은 매 전쟁
+                                시작 전에 공지 됩니다.)
                             </p>
-                            <p style={{ fontSize: "1.25rem", lineHeight: "1.5" }}>
+                            {/* <p id="roadmap" style={{ fontSize: "1rem", lineHeight: "1.5" }}>
                                 - buyback (커뮤니티 쪽에서 언급) 일정 수량의 nft를 바이백 하여 추후
                                 에어드랍으로 증정
-                            </p>
+                            </p> */}
                         </div>
                     </div>
                 </section>
                 <section className="roadmap-wrapper">
                     <h1 style={{ marginBottom: "1rem" }}>Roadmap</h1>
                     <p style={{ marginBottom: "2.5rem", lineHeight: "1.5" }}>
-                        Adam x Ego 로드맵은 각 목표 단계에 도달하면 다음 단계를 진행하는 것입니다.
+                        Adam X Ego 로드맵은 각 목표단계에 도달하면 다음 단계를 진행하는 것입니다.
                         <br />
-                        또한 장기적인 프로젝트를 목표로 하고 있습니다.
-                        <br /> 매 단계마다 목표를 실행하기 위해 ego-team을 구성하세요.
+                        또한 장기적인 프로젝트를 목표로 하고 있으니 지켜봐주시면 감사하겠습니다.
                     </p>
                     <div className="content">
                         <div className="item">
                             <div className="text">
                                 <h3>애플토큰</h3>
                                 <p>
-                                    애플토큰을 활용한 로터리 시스템 개발 애플토큰은 향후 모든
-                                    아담스이고 프로젝트에서 사용 될 예정
+                                    애플토큰을 활용한 로터리 시스템 개발 애플토큰은 향후 모든 Adam X
+                                    Ego 프로젝트에서 사용 예정
                                 </p>
                             </div>
                         </div>
@@ -180,7 +190,10 @@ const Home: NextPage = () => {
                         <div className="item">
                             <div className="text">
                                 <h3>기부</h3>
-                                <p>매 분기마다 일정 수익을 기부 (단체 정하기)</p>
+                                <p>
+                                    매 분기마다 일정 수익을 기부
+                                    <br />( 단체는 매번 상이할 수 있음 )
+                                </p>
                             </div>
                         </div>
                         <div className="item">
@@ -192,7 +205,7 @@ const Home: NextPage = () => {
                         <div className="item">
                             <div className="text" id="gallery">
                                 <h3>V2</h3>
-                                <p>버젼 2를 통한 생태계 확장과 글로벌 시장</p>
+                                <p>버젼 2를 통한 생태계 확장과 글로벌 시장 공략</p>
                             </div>
                         </div>
                     </div>
@@ -455,12 +468,12 @@ const MainWrapper = styled.div`
         position: relative;
         display: flex;
         justify-content: space-between;
-        min-height: 25rem;
+        min-height: 5rem;
 
         ${md} {
             flex-flow: column nowrap;
             justify-content: center;
-            min-height: 40rem;
+            min-height: 10rem;
         }
         .arrow-right {
             flex: 0 0 30%;
@@ -468,7 +481,7 @@ const MainWrapper = styled.div`
             display: inline-flex;
             flex-flow: column nowrap;
             gap: 2rem;
-            transition: right 0.5s;
+            transition: margin-left 0.5s;
             right: 0;
 
             &:before {
@@ -496,18 +509,24 @@ const MainWrapper = styled.div`
             }
 
             .img {
-                background: url("https://via.placeholder.com/480") no-repeat center/cover;
+                background: url("/static/img/eve.png") no-repeat center/cover;
                 width: 100%;
                 height: 100%;
             }
 
             &:hover {
-                right: -5rem;
-
+                /* right: -5rem; */
+                margin-left: 5rem;
                 .img {
                     background: url("https://via.placeholder.com/480") no-repeat center/cover;
                     animation: ${Fade} 1s linear;
                 }
+            }
+
+            h2 {
+                font-size: xx-large;
+                font-weight: 600;
+                letter-spacing: 0.5rem;
             }
 
             ${md} {
@@ -554,7 +573,7 @@ const MainWrapper = styled.div`
             }
 
             .img {
-                background: url("https://via.placeholder.com/480") no-repeat center/cover;
+                background: url("/static/img/devil.png") no-repeat center/cover;
                 width: 100%;
                 height: 100%;
             }
@@ -566,6 +585,12 @@ const MainWrapper = styled.div`
                     background: url("https://via.placeholder.com/480") no-repeat center/cover;
                     animation: ${Fade} 1s linear;
                 }
+            }
+
+            h2 {
+                font-size: xx-large;
+                font-weight: 600;
+                letter-spacing: 0.5rem;
             }
 
             ${md} {
@@ -598,10 +623,14 @@ const MainWrapper = styled.div`
 
         .about:not(.reverse) {
             display: grid;
-            grid-template-columns: 1fr 19.5rem;
+            grid-template-columns: 1fr;
             align-items: center;
             min-height: 20rem;
             gap: 2rem;
+            padding: 0 2rem;
+            ${md} {
+                padding: 0;
+            }
 
             .img {
                 background: url("https://via.placeholder.com/312") no-repeat center/cover;
@@ -614,24 +643,18 @@ const MainWrapper = styled.div`
                     height: 15rem;
                 }
             }
-
-            &:last-child {
-                grid-template-columns: 1fr;
-
-                padding: 0 2rem;
-
-                ${md} {
-                    padding: 0;
-                }
-            }
         }
 
         .reverse {
             display: grid;
-            grid-template-columns: 19.5rem 1fr;
+            grid-template-columns: 1fr;
             align-items: center;
             min-height: 20rem;
             gap: 2rem;
+            padding: 0 2rem;
+            ${md} {
+                padding: 0;
+            }
 
             .img {
                 background: url("https://via.placeholder.com/312") no-repeat center/cover;
@@ -651,9 +674,9 @@ const MainWrapper = styled.div`
             }
         }
 
-        > * + * {
-            margin-top: 4rem;
-        }
+        /* > * + * {
+            margin-top: 1rem;
+        } */
     }
 
     .roadmap-wrapper {
