@@ -629,7 +629,7 @@ const MainWrapper = styled.div`
             display: grid;
             grid-template-columns: 1fr;
             align-items: center;
-            min-height: 20rem;
+            min-height: 10rem;
             gap: 2rem;
             padding: 0 2rem;
             ${md} {
