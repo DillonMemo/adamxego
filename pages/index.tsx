@@ -8,10 +8,10 @@ import { MAX_WIDTH, md } from "../styles/styles";
 import { Discord, Kakaotalk, Twitter } from "../utils/icons";
 
 const data = [
-    { name: "A1", value: 100 },
-    { name: "B1", value: 100 },
-    { name: "C1", value: 100 },
-    { name: "D1", value: 150 },
+    { name: "Sale", value: 90 },
+    { name: "Airdrop", value: 5 },
+    { name: "Adam x Ego Team", value: 5 },
+    // { name: "D1", value: 150 },
 ];
 const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
 const RADIAN = Math.PI / 180;
@@ -98,23 +98,23 @@ const Home: NextPage = () => {
                 <section className="thumbnail-wrapper">
                     <img src="../static/img/main.png" alt="main" />
                 </section>
-                <section className="arrow-wrapper">
+                {/* <section className="arrow-wrapper">
                     <div className="arrow-right">
-                        <span className="percentage">00%</span>
+                        <span className="percentage">00%</span> */}
                         {/* <div className="img"></div> */}
-                        <h2>Good</h2>
+                        {/* <h2>Good</h2>
                     </div>
                     <div className="arrow-left">
-                        <span className="percentage">00%</span>
+                        <span className="percentage">00%</span> */}
                         {/* <div className="img" id="about"></div> */}
-                        <h2>Evil</h2>
+                        {/* <h2>Evil</h2>
                     </div>
-                </section>
-                <section className="about-wrapper">
+                </section> */}
+                <section id="about" className="about-wrapper" style={{ borderTop: "none"}}>
                     <div className="about">
                         <div>
                             <h1 style={{ fontSize: "1.25rem", marginBottom: "1rem" }}>
-                                {router.locale === "ko" ? "History" : ""}
+                                {router.locale === "ko" ? "History" : "History"}
                             </h1>
                             <p style={{ fontSize: "1rem", lineHeight: "1.5" }}>
                                 {router.locale === "ko" ? (
@@ -127,7 +127,12 @@ const Home: NextPage = () => {
                                         <br /> 그리고 선과 악의 대립은 결국 전쟁의 서사를 쓰게 된다.
                                     </>
                                 ) : (
-                                    <>Hello World</>
+                                    <>
+                                        The moment Adam took a bite of the apple, he had no idea what would happen.
+                                        <br /> Because of the apple, The EGO of Adam's descendants was divided into good and evil.
+                                        <br /> As the Ego was no longer controllable, the history of the good and evil followers has begun.
+                                        <br /> And the confrontation between good and evil eventually writes a narrative of war.
+                                    </>
                                 )}
                             </p>
                         </div>
@@ -137,19 +142,67 @@ const Home: NextPage = () => {
                         {/* <div className="img"></div> */}
                         <div>
                             <h1 style={{ fontSize: "1.25rem", marginBottom: "1rem" }}>Adam</h1>
-                            <p style={{ fontSize: "1rem", lineHeight: "1.5" }}>
-                                576개의 Pixel로 이루어지고 고유의 Item을 장착한 Generative art ‘Adam
-                                X Ego’는 각각 다른 10,000명으로 탄생한 고유의 인물입니다.
-                                <br /> 5,000명의 선한 정체성, 5,000명의 악한 정체성으로 탄생한 ‘Adam
-                                X Ego’는 클레이튼 블록체인에서 공식적으로 소유할 수 있습니다.
-                                <br /> 각각의 아담은 착용한 아이템에 따라 랭크가 정해집니다.
+                            <p id="roadmap" style={{ fontSize: "1rem", lineHeight: "1.5" }}>
+                                {router.locale === "ko" ? (
+                                    <>
+                                        576개의 Pixel로 이루어지고 고유의 Item을 장착한 Generative art ‘Adam
+                                        X Ego’는 각각 다른 10,000명으로 탄생한 고유의 인물입니다.
+                                        <br /> 5,000명의 선한 정체성, 5,000명의 악한 정체성으로 탄생한 ‘Adam
+                                        X Ego’는 클레이튼 블록체인에서 공식적으로 소유할 수 있습니다.
+                                        <br /> 각각의 아담은 착용한 아이템에 따라 랭크가 정해집니다.
+                                    </>
+                                ) : (
+                                    <>
+                                        Generative art "Adam X Ego”, which is consisted of 576 pixels and equipped with unique items, has its 10,000 characteristic figures.
+                                        <br /> “Adam X Ego” is created with 5,000 good identities and 5,000 evil identities, and it can be officially owned at Clayton Blockchain.
+                                        <br /> The rank of each Adam will be determined in accordance with the items worn.
+                                    </>
+                                )}
                             </p>
                         </div>
                     </div>
-                    <div className="about">
+                    {/* <div className="about">
                         <div style={{ lineHeight: "1.5" }}>
                             <h1 style={{ marginBottom: "1.25rem" }}>War System</h1>
-                            <p style={{ fontSize: "1rem", lineHeight: "1.5" }}>
+                            {router.locale === "ko" ? (
+                                <>
+                                    <p style={{ fontSize: "1rem", lineHeight: "2" }}>
+                                        - Rule 
+                                        <br /> 일정 시간까지 총 Volume 이 높은 Ego team 이 승리 합니다. 매
+                                        전쟁이 종료된 뒤 Token 응모를 통해 전리품을 획득할 수 있습니다.
+                                    </p>
+                                    <p style={{ fontSize: "1rem", lineHeight: "2" }}>
+                                        - Token distribution 
+                                        <br /> 전쟁에 참여하는 1 Adam 당 1 Apple token 지급
+                                    </p>
+                                    <p id="roadmap" style={{ fontSize: "1rem", lineHeight: "2" }}>
+                                        - Ceremony 
+                                        <br /> 우승한 Ego team 에게는 전리품 응모 권한이 생깁니다.
+                                        소유한 Token 최대 갯수만큼 응모할 수 있습니다. (전리품은 매 전쟁
+                                        시작 전에 공지 됩니다.)
+                                    </p>
+                                </>
+                            ) : (
+                                <>
+                                    <p style={{ fontSize: "1rem", lineHeight: "2" }}>
+                                        - Rule 
+                                        <br /> The Ego team with a higher total Volume wins after the certain time.
+                                        After every war ends, you can obtain trophy or item through Token event.
+                                    </p>
+                                    <p style={{ fontSize: "1rem", lineHeight: "2" }}>
+                                        - Token distribution 
+                                        <br /> 1 Apple token per Adam participating in the war.
+                                    </p>
+                                    <p id="roadmap" style={{ fontSize: "1rem", lineHeight: "2" }}>
+                                        - Ceremony 
+                                        <br /> The winning Ego team will obtain the chance to apply for the trophy or item 
+                                        You can apply as many as the number of Token you own.
+                                        (The trophy or item will be announced before every war begins.)
+                                    </p>
+                                </>
+                            )} */}
+
+                            {/* <p style={{ fontSize: "1rem", lineHeight: "1.5" }}>
                                 - Rule 일정 시간까지 총 Volume 이 높은 Ego team 이 승리 합니다. 매
                                 전쟁이 종료된 뒤 Token 응모를 통해 전리품을 획득할 수 있습니다.
                             </p>
@@ -160,56 +213,109 @@ const Home: NextPage = () => {
                                 - Ceremony 우승한 Ego team 에게는 전리품 응모 권한이 생깁니다.
                                 소유한 Token 최대 갯수만큼 응모할 수 있습니다. (전리품은 매 전쟁
                                 시작 전에 공지 됩니다.)
-                            </p>
+                            </p> */}
                             {/* <p id="roadmap" style={{ fontSize: "1rem", lineHeight: "1.5" }}>
                                 - buyback (커뮤니티 쪽에서 언급) 일정 수량의 nft를 바이백 하여 추후
                                 에어드랍으로 증정
                             </p> */}
-                        </div>
-                    </div>
+
+                        {/* </div>
+                    </div> */}
                 </section>
                 <section className="roadmap-wrapper">
                     <h1 style={{ marginBottom: "1rem" }}>Roadmap</h1>
                     <p style={{ marginBottom: "2.5rem", lineHeight: "1.5" }}>
-                        Adam X Ego 로드맵은 각 목표단계에 도달하면 다음 단계를 진행하는 것입니다.
-                        <br />
-                        또한 장기적인 프로젝트를 목표로 하고 있으니 지켜봐주시면 감사하겠습니다.
+                        {router.locale === "ko" ? (
+                            <>
+                                Adam X Ego 로드맵은 각 목표단계에 도달하면 다음 단계를 진행하는 것입니다.
+                                <br />
+                                또한 장기적인 프로젝트를 목표로 하고 있으니 지켜봐주시면 감사하겠습니다.
+                            </>
+                        ) : (
+                            <>
+                                The roadmap of Adam X Ego is to proceed to the next step once you reach each target step.
+                                <br />
+                                Also, we are planning for a long-term project, so it would be appreciated if you could keep an eye on our project.
+                            </>
+                        )}
                     </p>
                     <div className="content">
                         <div className="item">
                             <div className="text">
-                                <h3>애플토큰</h3>
+                                <h3>{router.locale === "ko" ? "애플토큰" : "Apple Token"}</h3>
                                 <p>
-                                    애플토큰을 활용한 로터리 시스템 개발 애플토큰은 향후 모든 Adam X
-                                    Ego 프로젝트에서 사용 예정
+                                    {router.locale === "ko" ? (
+                                        <>
+                                            애플토큰을 활용한 로터리 시스템 개발
+                                            <br />애플토큰은 향후 모든 Adam X
+                                            Ego 프로젝트에서 사용 예정
+                                        </>
+                                    ) : (
+                                        <>
+                                            Developing a rotary system 
+                                            <br /> using Apple Token
+                                            <br /> Apple Token will be used in all future projects of Adam X Ego.
+                                        </>
+                                    )}
                                 </p>
                             </div>
                         </div>
                         <div className="item">
                             <div className="text">
-                                <h3>홀더 우대</h3>
-                                <p>홀더 기반 거버넌스 커뮤니티 투표 시스템 개발</p>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <div className="text">
-                                <h3>기부</h3>
+                                <h3>{router.locale === "ko" ? "홀더 우대" : "Holder benefits"}</h3>
                                 <p>
-                                    매 분기마다 일정 수익을 기부
-                                    <br />( 단체는 매번 상이할 수 있음 )
+                                    {router.locale === "ko" ? (
+                                        <>
+                                            홀더 기반 거버넌스 
+                                            <br /> 커뮤니티 투표 시스템 개발
+                                        </>
+                                    ) : (
+                                        <>
+                                            Holder-based governance 
+                                            <br /> Developing community voting system.
+                                        </>
+                                    )}
                                 </p>
                             </div>
                         </div>
                         <div className="item">
+                            <div className="text">
+                                <h3>{router.locale === "ko" ? "기부" : "Donation"}</h3>
+                                <p>
+                                    {router.locale === "ko" ? (
+                                        <>
+                                            매 분기마다 일정 수익을 기부
+                                            <br /> ( 단체는 매번 상이할 수 있음 )
+                                        </>
+                                    ) : (
+                                        <>
+                                            Donate a certain amount of profit every quarter. 
+                                            <br /> (The donor recipients can be different every time.)
+                                        </>
+                                    )}
+                                </p>
+                            </div>
+                        </div>
+                        {/* <div className="item">
                             <div className="text">
                                 <h3>협업</h3>
                                 <p>타 프로젝트 팀과 콜라보 혹은 파트너쉽 체결</p>
                             </div>
-                        </div>
+                        </div> */}
                         <div className="item">
                             <div className="text" id="gallery">
                                 <h3>V2</h3>
-                                <p>버젼 2를 통한 생태계 확장과 글로벌 시장 공략</p>
+                                <p>
+                                    {router.locale === "ko" ? (
+                                        <>
+                                            버젼 2를 통한 생태계 확장과 글로벌 시장 공략
+                                        </>
+                                    ) : (
+                                        <>
+                                            Expanding the ecosystem and targeting global markets through Version 2.
+                                        </>
+                                    )}
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -235,8 +341,27 @@ const Home: NextPage = () => {
                     </div>
                 </section>
                 <section className="chart-wrapper">
-                    <div>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam unde
+                    {/* <div> */}
+                    <h1 style={{ marginBottom: "1rem" }}>{router.locale === "ko" ? "NFT 분배" : "NFT Distribution"}</h1>
+                    <div></div>
+                        <p style={{ fontSize: "1.2rem", lineHeight: "1.5" }}>
+                            {router.locale === "ko" ? (
+                                <>
+                                    ADAM X EGO NFT는 아래와 같이 배포됩니다. 
+                                </>
+                            ) : (
+                                <>
+                                    ADAM X EGO NFT are distributed as follows.
+                                </>
+                            )}
+                        </p>
+                    <div></div>
+                        <p style={{ fontSize: "1.5rem", lineHeight: "1.5" }}>
+                            Team : 500 Adam x Ego
+                            <br /> Airdrop : 500 Adam x Ego
+                            <br /> Sale : 9,000 Adam x Ego
+                        </p>
+                        {/* Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam unde
                         reprehenderit maxime quidem, delectus molestias veniam? Quae odit iure eaque
                         eum autem incidunt aperiam sunt, neque odio illum nemo nobis voluptatem
                         ducimus dolores enim molestiae commodi impedit corrupti non animi alias
@@ -244,8 +369,8 @@ const Home: NextPage = () => {
                         obcaecati doloribus modi explicabo, facilis soluta consequuntur alias
                         officiis maxime voluptatum possimus assumenda dignissimos est exercitationem
                         nihil animi. Obcaecati nihil ipsa laudantium accusamus sit, rem iste quas,
-                        doloribus sunt pariatur dolorum.
-                    </div>
+                        doloribus sunt pariatur dolorum. */}
+                    {/* </div> */}
                     <ResponsiveContainer width="100%" height="100%" id="team">
                         <PieChart width={400} height={400}>
                             <Pie
@@ -340,7 +465,7 @@ const Home: NextPage = () => {
                     Powered by <span>© 2021 Adam X Ego Team. All rights reserved.</span>
                 </p>
                 <p className="icon-container">
-                    <Link href="#">
+                    {/* <Link href="#">
                         <a>
                             <Discord width="1.5rem" height="1.5rem" />
                         </a>
@@ -349,9 +474,9 @@ const Home: NextPage = () => {
                         <a>
                             <Kakaotalk width="1.5rem" height="1.5rem" />
                         </a>
-                    </Link>
+                    </Link> */}
                     <Link href="#">
-                        <a>
+                        <a href="https://twitter.com/adamxego" target="_blank">
                             <Twitter width="1.5rem" height="1.5rem" />
                         </a>
                     </Link>
@@ -697,7 +822,7 @@ const MainWrapper = styled.div`
 
         > .content {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
             gap: 1rem;
 
             .item {
