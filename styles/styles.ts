@@ -27,6 +27,7 @@ export const GlobalStyles = createGlobalStyle`
       color: #C5C5C5 !important;
     }
     body {
+        font-family: 'Nanum Gothic', "Goldman", sans-serif;
         overscroll-behavior: auto;
         user-select: none;
         background: ${({ theme }: any) => theme.body};

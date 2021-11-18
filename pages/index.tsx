@@ -10,7 +10,7 @@ import { Discord, Kakaotalk, Twitter } from "../utils/icons";
 const data = [
     { name: "Sale", value: 90 },
     { name: "Airdrop", value: 5 },
-    { name: "Adam x Ego Team", value: 5 },
+    { name: "Team", value: 5 },
     // { name: "D1", value: 150 },
 ];
 const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
@@ -26,6 +26,7 @@ const Home: NextPage = () => {
         innerRadius,
         outerRadius,
         percent,
+        name,
     }: any): JSX.Element => {
         console.log(cx, cy, percent);
         const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
@@ -40,7 +41,7 @@ const Home: NextPage = () => {
                 textAnchor={x > cx ? "start" : "end"}
                 dominantBaseline="central"
             >
-                {`${(percent * 100).toFixed(0)}%`}
+                {`${name} ${(percent * 100).toFixed(0)}%`}
             </text>
         );
     };
@@ -57,11 +58,13 @@ const Home: NextPage = () => {
                     <div className="start">
                         <Link href="#">
                             <a>
-                                <h2 className="logo">ADAM X EGO</h2>
+                                <h2 className="logo" style={{ fontFamily: "goldman" }}>
+                                    ADAM X EGO
+                                </h2>
                             </a>
                         </Link>
                     </div>
-                    <div className="end">
+                    <div className="end" style={{ fontFamily: "goldman" }}>
                         <Link href="#about">
                             <a>About</a>
                         </Link>
@@ -85,6 +88,7 @@ const Home: NextPage = () => {
                                         locale: value,
                                     });
                                 }}
+                                style={{ fontFamily: "goldman" }}
                             >
                                 <option value="ko">KO</option>
                                 <option value="en">EN</option>
@@ -113,10 +117,22 @@ const Home: NextPage = () => {
                 <section id="about" className="about-wrapper" style={{ borderTop: "none" }}>
                     <div className="about">
                         <div>
-                            <h1 style={{ fontSize: "1.25rem", marginBottom: "1rem" }}>
+                            <h1
+                                style={{
+                                    fontSize: "1.25rem",
+                                    marginBottom: "1rem",
+                                    fontFamily: "goldman",
+                                }}
+                            >
                                 {router.locale === "ko" ? "History" : "History"}
                             </h1>
-                            <p style={{ fontSize: "1rem", lineHeight: "1.5" }}>
+                            <p
+                                style={{
+                                    fontSize: "1rem",
+                                    lineHeight: "1.5",
+                                    fontFamily: router.locale === "ko" ? "Nanum Gothic" : "goldman",
+                                }}
+                            >
                                 {router.locale === "ko" ? (
                                     <>
                                         아담이 사과를 한 입 베어 무는 순간, 어떤 일이 펼쳐질 지 그는
@@ -145,8 +161,23 @@ const Home: NextPage = () => {
                     <div className="about reverse">
                         {/* <div className="img"></div> */}
                         <div>
-                            <h1 style={{ fontSize: "1.25rem", marginBottom: "1rem" }}>Adam</h1>
-                            <p id="roadmap" style={{ fontSize: "1rem", lineHeight: "1.5" }}>
+                            <h1
+                                style={{
+                                    fontSize: "1.25rem",
+                                    marginBottom: "1rem",
+                                    fontFamily: "goldman",
+                                }}
+                            >
+                                Adam
+                            </h1>
+                            <p
+                                id="roadmap"
+                                style={{
+                                    fontSize: "1rem",
+                                    lineHeight: "1.5",
+                                    fontFamily: router.locale === "ko" ? "Nanum Gothic" : "goldman",
+                                }}
+                            >
                                 {router.locale === "ko" ? (
                                     <>
                                         576개의 Pixel로 이루어지고 고유의 Item을 장착한 Generative
@@ -234,8 +265,14 @@ const Home: NextPage = () => {
                     </div> */}
                 </section>
                 <section className="roadmap-wrapper">
-                    <h1 style={{ marginBottom: "1rem" }}>Roadmap</h1>
-                    <p style={{ marginBottom: "2.5rem", lineHeight: "1.5" }}>
+                    <h1 style={{ marginBottom: "1rem", fontFamily: "goldman" }}>Roadmap</h1>
+                    <p
+                        style={{
+                            marginBottom: "2.5rem",
+                            lineHeight: "1.5",
+                            fontFamily: router.locale === "ko" ? "Nanum Gothic" : "goldman",
+                        }}
+                    >
                         {router.locale === "ko" ? (
                             <>
                                 Adam X Ego 로드맵은 각 목표단계에 도달하면 다음 단계를 진행하는
@@ -256,7 +293,12 @@ const Home: NextPage = () => {
                     </p>
                     <div className="content">
                         <div className="item">
-                            <div className="text">
+                            <div
+                                className="text"
+                                style={{
+                                    fontFamily: router.locale === "ko" ? "Nanum Gothic" : "goldman",
+                                }}
+                            >
                                 <h3>{router.locale === "ko" ? "애플토큰" : "Apple Token"}</h3>
                                 <p>
                                     {router.locale === "ko" ? (
@@ -277,7 +319,12 @@ const Home: NextPage = () => {
                             </div>
                         </div>
                         <div className="item">
-                            <div className="text">
+                            <div
+                                className="text"
+                                style={{
+                                    fontFamily: router.locale === "ko" ? "Nanum Gothic" : "goldman",
+                                }}
+                            >
                                 <h3>{router.locale === "ko" ? "홀더 우대" : "Holder benefits"}</h3>
                                 <p>
                                     {router.locale === "ko" ? (
@@ -295,7 +342,12 @@ const Home: NextPage = () => {
                             </div>
                         </div>
                         <div className="item">
-                            <div className="text">
+                            <div
+                                className="text"
+                                style={{
+                                    fontFamily: router.locale === "ko" ? "Nanum Gothic" : "goldman",
+                                }}
+                            >
                                 <h3>{router.locale === "ko" ? "기부" : "Donation"}</h3>
                                 <p>
                                     {router.locale === "ko" ? (
@@ -320,7 +372,13 @@ const Home: NextPage = () => {
                             </div>
                         </div> */}
                         <div className="item">
-                            <div className="text" id="gallery">
+                            <div
+                                className="text"
+                                id="gallery"
+                                style={{
+                                    fontFamily: router.locale === "ko" ? "Nanum Gothic" : "goldman",
+                                }}
+                            >
                                 <h3>V2</h3>
                                 <p>
                                     {router.locale === "ko" ? (
@@ -356,58 +414,69 @@ const Home: NextPage = () => {
                         <div className="img"></div>
                     </div>
                 </section>
-                <section className="chart-wrapper">
-                    {/* <div> */}
-                    <h1 style={{ marginBottom: "1rem" }}>
-                        {router.locale === "ko" ? "NFT 분배" : "NFT Distribution"}
-                    </h1>
-                    <div></div>
-                    <p style={{ fontSize: "1.2rem", lineHeight: "1.5" }}>
-                        {router.locale === "ko" ? (
-                            <>ADAM X EGO NFT는 아래와 같이 배포됩니다.</>
-                        ) : (
-                            <>ADAM X EGO NFT are distributed as follows.</>
-                        )}
-                    </p>
-                    <div></div>
-                    <p style={{ fontSize: "1.5rem", lineHeight: "1.5" }}>
-                        Team : 500 Adam x Ego
-                        <br /> Airdrop : 500 Adam x Ego
-                        <br /> Sale : 9,000 Adam x Ego
-                    </p>
-                    {/* Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam unde
-                        reprehenderit maxime quidem, delectus molestias veniam? Quae odit iure eaque
-                        eum autem incidunt aperiam sunt, neque odio illum nemo nobis voluptatem
-                        ducimus dolores enim molestiae commodi impedit corrupti non animi alias
-                        quidem delectus doloremque accusamus! Temporibus sed voluptates aliquid
-                        obcaecati doloribus modi explicabo, facilis soluta consequuntur alias
-                        officiis maxime voluptatum possimus assumenda dignissimos est exercitationem
-                        nihil animi. Obcaecati nihil ipsa laudantium accusamus sit, rem iste quas,
-                        doloribus sunt pariatur dolorum. */}
-                    {/* </div> */}
-                    <ResponsiveContainer width="100%" height="100%" id="team">
-                        <PieChart width={400} height={400}>
-                            <Pie
-                                data={data}
-                                dataKey="value"
-                                cx="50%"
-                                cy="50%"
-                                innerRadius={50}
-                                outerRadius={90}
-                                label={({ percent }) => `TEXT ${(percent * 100).toFixed(0)}%`}
-                                labelLine={false}
-                            >
-                                {data.map((_, index) => (
-                                    <Cell
-                                        key={`cell-${index}`}
-                                        fill={COLORS[index % COLORS.length]}
-                                    />
-                                ))}
-                            </Pie>
-                        </PieChart>
-                    </ResponsiveContainer>
+                <section
+                    className="chart-wrapper"
+                    style={{ fontFamily: router.locale === "ko" ? "Nanum Gothic" : "goldman" }}
+                >
+                    <h1>{router.locale === "ko" ? "NFT 분배" : "NFT Distribution"}</h1>
+                    <div>
+                        <div className="content">
+                            <p className="description">
+                                {router.locale === "ko" ? (
+                                    <>ADAM X EGO NFT는 아래와 같이 배포됩니다.</>
+                                ) : (
+                                    <>ADAM X EGO NFT are distributed as follows.</>
+                                )}
+                            </p>
+                            <p style={{ fontSize: "1.5rem", lineHeight: "1.5" }}>
+                                <span style={{ color: "rgb(0, 136, 254)" }}>
+                                    Team : 500 Adam x Ego
+                                </span>
+                                <br />{" "}
+                                <span style={{ color: "rgb(0, 196, 159)" }}>
+                                    Airdrop : 500 Adam x Ego
+                                </span>
+                                <br />{" "}
+                                <span style={{ color: "rgb(255, 187, 40)" }}>
+                                    Sale : 9,000 Adam x Ego
+                                </span>
+                            </p>
+                        </div>
+
+                        <ResponsiveContainer
+                            width="100%"
+                            height="100%"
+                            id="team"
+                            className="chart-content"
+                        >
+                            <PieChart width={400} height={400}>
+                                <Pie
+                                    data={data}
+                                    dataKey="value"
+                                    cx="50%"
+                                    cy="50%"
+                                    innerRadius={50}
+                                    outerRadius={90}
+                                    label={({ name, percent }) =>
+                                        `${name} ${(percent * 100).toFixed(0)}%`
+                                    }
+                                    labelLine={false}
+                                >
+                                    {data.map((_, index) => (
+                                        <Cell
+                                            key={`cell-${index}`}
+                                            fill={COLORS[index % COLORS.length]}
+                                        />
+                                    ))}
+                                </Pie>
+                            </PieChart>
+                        </ResponsiveContainer>
+                    </div>
                 </section>
-                <section className="team-wrapper">
+                <section
+                    className="team-wrapper"
+                    style={{ fontFamily: router.locale === "ko" ? "Nanum Gothic" : "goldman" }}
+                >
                     <h1>Team</h1>
                     <div className="content">
                         <div className="profile">
@@ -475,7 +544,7 @@ const Home: NextPage = () => {
             </MainWrapper>
 
             <FooterWrapper>
-                <p>
+                <p style={{ fontFamily: router.locale === "ko" ? "Nanum Gothic" : "goldman" }}>
                     Powered by <span>© 2021 Adam X Ego Team. All rights reserved.</span>
                 </p>
                 <p className="icon-container">
@@ -798,11 +867,12 @@ const MainWrapper = styled.div`
             display: grid;
             grid-template-columns: 1fr;
             align-items: center;
-            min-height: 20rem;
+            min-height: 10rem;
             gap: 2rem;
             padding: 0 2rem;
             ${md} {
                 padding: 0;
+                min-height: 20rem;
             }
 
             .img {
@@ -914,16 +984,35 @@ const MainWrapper = styled.div`
 
         position: relative;
 
-        display: grid;
-        grid-template-columns: 1.25fr 0.75fr;
-        align-items: center;
+        > div {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            ${md} {
+                grid-template-columns: 1fr;
+            }
+            > div.content {
+                > h1 {
+                    margin-bottom: 1rem;
+                }
 
-        ${md} {
-            grid-template-columns: 1fr;
-        }
+                > p.description {
+                    font-size: 1.2rem;
+                    line-height: 1.5;
+                    margin-bottom: 2rem;
 
-        > div:last-child {
-            min-height: 20rem;
+                    ${md} {
+                        margin-bottom: 1.5rem;
+                    }
+                }
+            }
+            > div:last-child {
+                min-height: 20rem;
+
+                ${md} {
+                    font-size: 0.5rem;
+                }
+            }
         }
     }
 
