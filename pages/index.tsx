@@ -58,13 +58,13 @@ const Home: NextPage = () => {
                     <div className="start">
                         <Link href="#">
                             <a>
-                                <h2 className="logo" style={{ fontFamily: "goldman" }}>
+                                <h2 className="logo" style={{ fontFamily: "Hind" }}>
                                     ADAM X EGO
                                 </h2>
                             </a>
                         </Link>
                     </div>
-                    <div className="end" style={{ fontFamily: "goldman" }}>
+                    <div className="end" style={{ fontFamily: "Hind" }}>
                         <Link href="#about">
                             <a>About</a>
                         </Link>
@@ -88,7 +88,7 @@ const Home: NextPage = () => {
                                         locale: value,
                                     });
                                 }}
-                                style={{ fontFamily: "goldman" }}
+                                style={{ fontFamily: "Hind" }}
                             >
                                 <option value="ko">KO</option>
                                 <option value="en">EN</option>
@@ -119,9 +119,9 @@ const Home: NextPage = () => {
                         <div>
                             <h1
                                 style={{
-                                    fontSize: "1.25rem",
+                                    fontSize: "2rem",
                                     marginBottom: "1rem",
-                                    fontFamily: "goldman",
+                                    fontFamily: "Hind",
                                 }}
                             >
                                 {router.locale === "ko" ? "History" : "History"}
@@ -130,7 +130,7 @@ const Home: NextPage = () => {
                                 style={{
                                     fontSize: "1rem",
                                     lineHeight: "1.5",
-                                    fontFamily: router.locale === "ko" ? "Nanum Gothic" : "goldman",
+                                    fontFamily: router.locale === "ko" ? "Nanum Gothic" : "Hind",
                                 }}
                             >
                                 {router.locale === "ko" ? (
@@ -163,9 +163,9 @@ const Home: NextPage = () => {
                         <div>
                             <h1
                                 style={{
-                                    fontSize: "1.25rem",
+                                    fontSize: "2rem",
                                     marginBottom: "1rem",
-                                    fontFamily: "goldman",
+                                    fontFamily: "Hind",
                                 }}
                             >
                                 Adam
@@ -175,7 +175,7 @@ const Home: NextPage = () => {
                                 style={{
                                     fontSize: "1rem",
                                     lineHeight: "1.5",
-                                    fontFamily: router.locale === "ko" ? "Nanum Gothic" : "goldman",
+                                    fontFamily: router.locale === "ko" ? "Nanum Gothic" : "Hind",
                                 }}
                             >
                                 {router.locale === "ko" ? (
@@ -265,12 +265,12 @@ const Home: NextPage = () => {
                     </div> */}
                 </section>
                 <section className="roadmap-wrapper">
-                    <h1 style={{ marginBottom: "1rem", fontFamily: "goldman" }}>Roadmap</h1>
+                    <h1 style={{ marginBottom: "1rem", fontFamily: "Hind" }}>Roadmap</h1>
                     <p
                         style={{
-                            marginBottom: "2.5rem",
+                            marginBottom: "5rem",
                             lineHeight: "1.5",
-                            fontFamily: router.locale === "ko" ? "Nanum Gothic" : "goldman",
+                            fontFamily: router.locale === "ko" ? "Nanum Gothic" : "Hind",
                         }}
                     >
                         {router.locale === "ko" ? (
@@ -296,7 +296,7 @@ const Home: NextPage = () => {
                             <div
                                 className="text"
                                 style={{
-                                    fontFamily: router.locale === "ko" ? "Nanum Gothic" : "goldman",
+                                    fontFamily: router.locale === "ko" ? "Nanum Gothic" : "Hind",
                                 }}
                             >
                                 <h3>{router.locale === "ko" ? "애플토큰" : "Apple Token"}</h3>
@@ -322,7 +322,7 @@ const Home: NextPage = () => {
                             <div
                                 className="text"
                                 style={{
-                                    fontFamily: router.locale === "ko" ? "Nanum Gothic" : "goldman",
+                                    fontFamily: router.locale === "ko" ? "Nanum Gothic" : "Hind",
                                 }}
                             >
                                 <h3>{router.locale === "ko" ? "홀더 우대" : "Holder benefits"}</h3>
@@ -345,7 +345,7 @@ const Home: NextPage = () => {
                             <div
                                 className="text"
                                 style={{
-                                    fontFamily: router.locale === "ko" ? "Nanum Gothic" : "goldman",
+                                    fontFamily: router.locale === "ko" ? "Nanum Gothic" : "Hind",
                                 }}
                             >
                                 <h3>{router.locale === "ko" ? "기부" : "Donation"}</h3>
@@ -376,13 +376,14 @@ const Home: NextPage = () => {
                                 className="text"
                                 id="gallery"
                                 style={{
-                                    fontFamily: router.locale === "ko" ? "Nanum Gothic" : "goldman",
+                                    fontFamily: router.locale === "ko" ? "Nanum Gothic" : "Hind",
                                 }}
                             >
                                 <h3>V2</h3>
                                 <p>
                                     {router.locale === "ko" ? (
-                                        <>버젼 2를 통한 생태계 확장과 글로벌 시장 공략</>
+                                        <>버전 2를 통한 
+                                        <br /> 생태계 확장과 글로벌 시장 공략</>
                                     ) : (
                                         <>
                                             Expanding the ecosystem and targeting global markets
@@ -416,7 +417,7 @@ const Home: NextPage = () => {
                 </section>
                 <section
                     className="chart-wrapper"
-                    style={{ fontFamily: router.locale === "ko" ? "Nanum Gothic" : "goldman" }}
+                    style={{ fontFamily: router.locale === "ko" ? "Nanum Gothic" : "Hind" }}
                 >
                     <h1>{router.locale === "ko" ? "NFT 분배" : "NFT Distribution"}</h1>
                     <div>
@@ -429,7 +430,7 @@ const Home: NextPage = () => {
                                 )}
                             </p>
                             <p style={{ fontSize: "1.5rem", lineHeight: "1.5" }}>
-                                <span style={{ color: "rgb(0, 136, 254)" }}>
+                                <span style={{ color: "rgb(255, 187, 40)" }}>
                                     Team : 500 Adam x Ego
                                 </span>
                                 <br />{" "}
@@ -437,7 +438,7 @@ const Home: NextPage = () => {
                                     Airdrop : 500 Adam x Ego
                                 </span>
                                 <br />{" "}
-                                <span style={{ color: "rgb(255, 187, 40)" }}>
+                                <span style={{ color: "rgb(0, 136, 254)" }}>
                                     Sale : 9,000 Adam x Ego
                                 </span>
                             </p>
@@ -475,7 +476,7 @@ const Home: NextPage = () => {
                 </section>
                 <section
                     className="team-wrapper"
-                    style={{ fontFamily: router.locale === "ko" ? "Nanum Gothic" : "goldman" }}
+                    style={{ fontFamily: router.locale === "ko" ? "Nanum Gothic" : "Hind" }}
                 >
                     <h1>Team</h1>
                     <div className="content">
@@ -515,18 +516,18 @@ const Home: NextPage = () => {
                                 <br /> 정말 고통스럽게 합니다.
                             </p> */}
                         </div>
-                        <div className="profile">
+                        {/* <div className="profile">
                             <div className="img"></div>
                             <p className="title">
                                 <b>Gabriel</b>
                                 <br />
                                 <small>Marketer</small>
-                            </p>
+                            </p> */}
                             {/* <p className="description">
                                 평화를 좋아합니다. <br />
                                 언제나 모든 인류가 평화롭길 원합니다.
                             </p> */}
-                        </div>
+                        {/* </div> */}
                         <div className="profile">
                             <div className="img"></div>
                             <p className="title">
@@ -544,7 +545,7 @@ const Home: NextPage = () => {
             </MainWrapper>
 
             <FooterWrapper>
-                <p style={{ fontFamily: router.locale === "ko" ? "Nanum Gothic" : "goldman" }}>
+                <p style={{ fontFamily: router.locale === "ko" ? "Nanum Gothic" : "Hind" }}>
                     Powered by <span>© 2021 Adam X Ego Team. All rights reserved.</span>
                 </p>
                 <p className="icon-container">
@@ -831,7 +832,7 @@ const MainWrapper = styled.div`
 
     .about-wrapper {
         border-top: 1px solid #f5c631;
-        padding: 3rem 1.25rem;
+        padding: 2rem 1.25rem;
 
         position: relative;
 
@@ -845,7 +846,7 @@ const MainWrapper = styled.div`
             align-items: center;
             min-height: 10rem;
             gap: 2rem;
-            padding: 0 2rem;
+            // padding: 0 2rem;
             ${md} {
                 padding: 0;
             }
@@ -869,7 +870,7 @@ const MainWrapper = styled.div`
             align-items: center;
             min-height: 10rem;
             gap: 2rem;
-            padding: 0 2rem;
+            // padding: 0 2rem;
             ${md} {
                 padding: 0;
                 min-height: 20rem;
@@ -1029,11 +1030,12 @@ const MainWrapper = styled.div`
         .content {
             width: 100%;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-            gap: 1rem;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 7rem;
 
             ${md} {
                 grid-template-columns: 1fr 1fr;
+                gap: 1rem;
             }
             .profile {
                 display: inline-flex;
@@ -1045,6 +1047,10 @@ const MainWrapper = styled.div`
                     background: url("https://via.placeholder.com/224") no-repeat center/cover;
                     width: 100%;
                     height: 14rem;
+
+                    ${md} {
+                        height: 11rem;
+                    }
                 }
 
                 .title {
