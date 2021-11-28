@@ -481,7 +481,7 @@ const Home: NextPage = () => {
                     <h1>Team</h1>
                     <div className="content">
                         <div className="profile">
-                            <div className="img"></div>
+                            <div className="img" style={{ background: "url(../static/img/eden.png) no-repeat center/cover" }}></div>
                             <p className="title">
                                 <b>Eden</b>
                                 <br />
@@ -493,7 +493,7 @@ const Home: NextPage = () => {
                             </p> */}
                         </div>
                         <div className="profile">
-                            <div className="img"></div>
+                            <div className="img" style={{ background: "url(../static/img/dotty.png) no-repeat center/cover" }}></div>
                             <p className="title">
                                 <b>Dotty</b>
                                 <br />
@@ -504,18 +504,18 @@ const Home: NextPage = () => {
                                 <br /> 젤리를 좋아합니다.
                             </p> */}
                         </div>
-                        <div className="profile">
+                        {/* <div className="profile">
                             <div className="img"></div>
                             <p className="title">
                                 <b>Mada</b>
                                 <br />
                                 <small>Advisor</small>
-                            </p>
+                            </p> */}
                             {/* <p className="description">
                                 adam x ego의 고문을 담당합니다.
                                 <br /> 정말 고통스럽게 합니다.
                             </p> */}
-                        </div>
+                        {/* </div> */}
                         {/* <div className="profile">
                             <div className="img"></div>
                             <p className="title">
@@ -529,7 +529,7 @@ const Home: NextPage = () => {
                             </p> */}
                         {/* </div> */}
                         <div className="profile">
-                            <div className="img"></div>
+                            <div className="img" style={{ background: "url(../static/img/lucifer.png) no-repeat center/cover" }}></div>
                             <p className="title">
                                 <b>Lucifer</b>
                                 <br />
@@ -1030,7 +1030,7 @@ const MainWrapper = styled.div`
         .content {
             width: 100%;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
             gap: 7rem;
 
             ${md} {
@@ -1044,9 +1044,9 @@ const MainWrapper = styled.div`
                 gap: 0.875rem;
 
                 .img {
-                    background: url("https://via.placeholder.com/224") no-repeat center/cover;
+                    // background: url("https://via.placeholder.com/224") no-repeat center/cover;
                     width: 100%;
-                    height: 14rem;
+                    height: 21rem;
 
                     ${md} {
                         height: 11rem;
