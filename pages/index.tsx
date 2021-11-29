@@ -115,95 +115,100 @@ const Home: NextPage = () => {
                     </div>
                 </section> */}
                 <section id="about" className="about-wrapper" style={{ borderTop: "none" }}>
-                    <div className="about">
-                        <div>
-                            <h1
-                                style={{
-                                    fontSize: "2rem",
-                                    marginBottom: "1rem",
-                                    fontFamily: "Hind",
-                                }}
-                            >
-                                {router.locale === "ko" ? "History" : "History"}
-                            </h1>
-                            <p
-                                style={{
-                                    fontSize: "1rem",
-                                    lineHeight: "1.5",
-                                    fontFamily: router.locale === "ko" ? "Nanum Gothic" : "Hind",
-                                }}
-                            >
-                                {router.locale === "ko" ? (
-                                    <>
-                                        아담이 사과를 한 입 베어 무는 순간, 어떤 일이 펼쳐질 지 그는
-                                        전혀 짐작하지 못했다.
-                                        <br /> 그 사과로 인해 아담의 후손들의 Ego는 선과 악으로
-                                        나뉘었고, 더이상 Ego를 통제 할 수 없게 되면서 선과 악을
-                                        따르는 추종자들의 역사가 시작되었다.
-                                        <br /> 그리고 선과 악의 대립은 결국 전쟁의 서사를 쓰게 된다.
-                                    </>
-                                ) : (
-                                    <>
-                                        The moment Adam took a bite of the apple, he had no idea
-                                        what would happen.
-                                        <br /> Because of the apple, The EGO of Adam&rsquo;s
-                                        descendants was divided into good and evil.
-                                        <br /> As the Ego was no longer controllable, the history of
-                                        the good and evil followers has begun.
-                                        <br /> And the confrontation between good and evil
-                                        eventually writes a narrative of war.
-                                    </>
-                                )}
-                            </p>
+                    <div>
+                        <div className="about">
+                            <div>
+                                <h1
+                                    style={{
+                                        fontSize: "2rem",
+                                        marginBottom: "1rem",
+                                        fontFamily: "Hind",
+                                    }}
+                                >
+                                    {router.locale === "ko" ? "History" : "History"}
+                                </h1>
+                                <p
+                                    style={{
+                                        fontSize: "1rem",
+                                        lineHeight: "1.5",
+                                        fontFamily:
+                                            router.locale === "ko" ? "Nanum Gothic" : "Hind",
+                                    }}
+                                >
+                                    {router.locale === "ko" ? (
+                                        <>
+                                            아담이 사과를 한 입 베어 무는 순간, 어떤 일이 펼쳐질 지
+                                            그는 전혀 짐작하지 못했다.
+                                            <br /> 그 사과로 인해 아담의 후손들의 Ego는 선과 악으로
+                                            나뉘었고, 더이상 Ego를 통제 할 수 없게 되면서 선과 악을
+                                            따르는 추종자들의 역사가 시작되었다.
+                                            <br /> 그리고 선과 악의 대립은 결국 전쟁의 서사를 쓰게
+                                            된다.
+                                        </>
+                                    ) : (
+                                        <>
+                                            The moment Adam took a bite of the apple, he had no idea
+                                            what would happen.
+                                            <br /> Because of the apple, The EGO of Adam&rsquo;s
+                                            descendants was divided into good and evil.
+                                            <br /> As the Ego was no longer controllable, the
+                                            history of the good and evil followers has begun.
+                                            <br /> And the confrontation between good and evil
+                                            eventually writes a narrative of war.
+                                        </>
+                                    )}
+                                </p>
+                            </div>
+                            {/* <div className="img"></div> */}
                         </div>
-                        {/* <div className="img"></div> */}
-                    </div>
-                    <div className="about reverse">
-                        {/* <div className="img"></div> */}
-                        <div>
-                            <h1
-                                style={{
-                                    fontSize: "2rem",
-                                    marginBottom: "1rem",
-                                    fontFamily: "Hind",
-                                }}
-                            >
-                                Adam
-                            </h1>
-                            <p
-                                id="roadmap"
-                                style={{
-                                    fontSize: "1rem",
-                                    lineHeight: "1.5",
-                                    fontFamily: router.locale === "ko" ? "Nanum Gothic" : "Hind",
-                                }}
-                            >
-                                {router.locale === "ko" ? (
-                                    <>
-                                        576개의 Pixel로 이루어지고 고유의 Item을 장착한 Generative
-                                        art ‘Adam X Ego’는 각각 다른 10,000명으로 탄생한 고유의
-                                        인물입니다.
-                                        <br /> 5,000명의 선한 정체성, 5,000명의 악한 정체성으로
-                                        탄생한 ‘Adam X Ego’는 클레이튼 블록체인에서 공식적으로
-                                        소유할 수 있습니다.
-                                        <br /> 각각의 아담은 착용한 아이템에 따라 랭크가 정해집니다.
-                                    </>
-                                ) : (
-                                    <>
-                                        Generative art &ldquo;Adam X Ego&rdquo;, which is consisted
-                                        of 576 pixels and equipped with unique items, has its 10,000
-                                        characteristic figures.
-                                        <br /> “Adam X Ego” is created with 5,000 good identities
-                                        and 5,000 evil identities, and it can be officially owned at
-                                        Clayton Blockchain.
-                                        <br /> The rank of each Adam will be determined in
-                                        accordance with the items worn.
-                                    </>
-                                )}
-                            </p>
+                        <div className="about reverse">
+                            {/* <div className="img"></div> */}
+                            <div>
+                                <h1
+                                    style={{
+                                        fontSize: "2rem",
+                                        marginBottom: "1rem",
+                                        fontFamily: "Hind",
+                                    }}
+                                >
+                                    Adam
+                                </h1>
+                                <p
+                                    id="roadmap"
+                                    style={{
+                                        fontSize: "1rem",
+                                        lineHeight: "1.5",
+                                        fontFamily:
+                                            router.locale === "ko" ? "Nanum Gothic" : "Hind",
+                                    }}
+                                >
+                                    {router.locale === "ko" ? (
+                                        <>
+                                            576개의 Pixel로 이루어지고 고유의 Item을 장착한
+                                            Generative art ‘Adam X Ego’는 각각 다른 10,000명으로
+                                            탄생한 고유의 인물입니다.
+                                            <br /> 5,000명의 선한 정체성, 5,000명의 악한 정체성으로
+                                            탄생한 ‘Adam X Ego’는 클레이튼 블록체인에서 공식적으로
+                                            소유할 수 있습니다.
+                                            <br /> 각각의 아담은 착용한 아이템에 따라 랭크가
+                                            정해집니다.
+                                        </>
+                                    ) : (
+                                        <>
+                                            Generative art &ldquo;Adam X Ego&rdquo;, which is
+                                            consisted of 576 pixels and equipped with unique items,
+                                            has its 10,000 characteristic figures.
+                                            <br /> “Adam X Ego” is created with 5,000 good
+                                            identities and 5,000 evil identities, and it can be
+                                            officially owned at Clayton Blockchain.
+                                            <br /> The rank of each Adam will be determined in
+                                            accordance with the items worn.
+                                        </>
+                                    )}
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    {/* <div className="about">
+                        {/* <div className="about">
                         <div style={{ lineHeight: "1.5" }}>
                             <h1 style={{ marginBottom: "1.25rem" }}>War System</h1>
                             {router.locale === "ko" ? (
@@ -244,7 +249,7 @@ const Home: NextPage = () => {
                                 </>
                             )} */}
 
-                    {/* <p style={{ fontSize: "1rem", lineHeight: "1.5" }}>
+                        {/* <p style={{ fontSize: "1rem", lineHeight: "1.5" }}>
                                 - Rule 일정 시간까지 총 Volume 이 높은 Ego team 이 승리 합니다. 매
                                 전쟁이 종료된 뒤 Token 응모를 통해 전리품을 획득할 수 있습니다.
                             </p>
@@ -256,13 +261,17 @@ const Home: NextPage = () => {
                                 소유한 Token 최대 갯수만큼 응모할 수 있습니다. (전리품은 매 전쟁
                                 시작 전에 공지 됩니다.)
                             </p> */}
-                    {/* <p id="roadmap" style={{ fontSize: "1rem", lineHeight: "1.5" }}>
+                        {/* <p id="roadmap" style={{ fontSize: "1rem", lineHeight: "1.5" }}>
                                 - buyback (커뮤니티 쪽에서 언급) 일정 수량의 nft를 바이백 하여 추후
                                 에어드랍으로 증정
                             </p> */}
 
-                    {/* </div>
+                        {/* </div>
                     </div> */}
+                    </div>
+                    <div>
+                        <span>GIF</span>
+                    </div>
                 </section>
                 <section className="roadmap-wrapper">
                     <h1 style={{ marginBottom: "1rem", fontFamily: "Hind" }}>Roadmap</h1>
@@ -382,8 +391,10 @@ const Home: NextPage = () => {
                                 <h3>V2</h3>
                                 <p>
                                     {router.locale === "ko" ? (
-                                        <>버전 2를 통한 
-                                        <br /> 생태계 확장과 글로벌 시장 공략</>
+                                        <>
+                                            버전 2를 통한
+                                            <br /> 생태계 확장과 글로벌 시장 공략
+                                        </>
                                     ) : (
                                         <>
                                             Expanding the ecosystem and targeting global markets
@@ -481,7 +492,13 @@ const Home: NextPage = () => {
                     <h1>Team</h1>
                     <div className="content">
                         <div className="profile">
-                            <div className="img" style={{ background: "url(../static/img/eden.png) no-repeat center/cover" }}></div>
+                            <div
+                                className="img"
+                                style={{
+                                    background:
+                                        "url(../static/img/eden.png) no-repeat center/cover",
+                                }}
+                            ></div>
                             <p className="title">
                                 <b>Eden</b>
                                 <br />
@@ -493,7 +510,13 @@ const Home: NextPage = () => {
                             </p> */}
                         </div>
                         <div className="profile">
-                            <div className="img" style={{ background: "url(../static/img/dotty.png) no-repeat center/cover" }}></div>
+                            <div
+                                className="img"
+                                style={{
+                                    background:
+                                        "url(../static/img/dotty.png) no-repeat center/cover",
+                                }}
+                            ></div>
                             <p className="title">
                                 <b>Dotty</b>
                                 <br />
@@ -511,7 +534,7 @@ const Home: NextPage = () => {
                                 <br />
                                 <small>Advisor</small>
                             </p> */}
-                            {/* <p className="description">
+                        {/* <p className="description">
                                 adam x ego의 고문을 담당합니다.
                                 <br /> 정말 고통스럽게 합니다.
                             </p> */}
@@ -523,13 +546,19 @@ const Home: NextPage = () => {
                                 <br />
                                 <small>Marketer</small>
                             </p> */}
-                            {/* <p className="description">
+                        {/* <p className="description">
                                 평화를 좋아합니다. <br />
                                 언제나 모든 인류가 평화롭길 원합니다.
                             </p> */}
                         {/* </div> */}
                         <div className="profile">
-                            <div className="img" style={{ background: "url(../static/img/lucifer.png) no-repeat center/cover" }}></div>
+                            <div
+                                className="img"
+                                style={{
+                                    background:
+                                        "url(../static/img/lucifer.png) no-repeat center/cover",
+                                }}
+                            ></div>
                             <p className="title">
                                 <b>Lucifer</b>
                                 <br />
@@ -836,8 +865,20 @@ const MainWrapper = styled.div`
 
         position: relative;
 
+        display: flex;
+        flex-flow: row nowrap;
+
         ${md} {
             padding: 3rem 0;
+            flex-direction: column;
+        }
+
+        > div:first-child {
+            flex: 3;
+        }
+
+        > div:last-child {
+            flex: 1;
         }
 
         .about:not(.reverse) {
