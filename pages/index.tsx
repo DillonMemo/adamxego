@@ -269,9 +269,9 @@ const Home: NextPage = () => {
                         {/* </div>
                     </div> */}
                     </div>
-                    <div>
+                    {/* <div> */}
                         {/* <span>GIF</span> */}
-                    </div>
+                    {/* </div> */}
                 </section>
                 <section className="roadmap-wrapper">
                     <h1 style={{ marginBottom: "1rem", fontFamily: "Hind" }}>Roadmap</h1>
