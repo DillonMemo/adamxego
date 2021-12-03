@@ -270,7 +270,7 @@ const Home: NextPage = () => {
                     </div> */}
                     </div>
                     <div>
-                        <span>GIF</span>
+                        {/* <span>GIF</span> */}
                     </div>
                 </section>
                 <section className="roadmap-wrapper">
