@@ -560,7 +560,7 @@ const Home: NextPage = () => {
                                 }}
                             ></div>
                             <p className="title">
-                                <b>Lucifer</b>
+                                <b>Ayaan</b>
                                 <br />
                                 <small>Marketer</small>
                             </p>
