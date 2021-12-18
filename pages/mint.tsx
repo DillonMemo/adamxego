@@ -11,10 +11,10 @@ import { HeaderWrapper, FooterWrapper } from "./index";
 const Mint: NextPage = () => {
     const router = useRouter();
     const [{ day, hour, minute, second }, setCountDown] = useState({
-        day: "",
-        hour: "",
-        minute: "",
-        second: "",
+        day: "00",
+        hour: "00",
+        minute: "00",
+        second: "00",
     });
 
     // const { day, hour, min, sec } = calcTimeHandler();
