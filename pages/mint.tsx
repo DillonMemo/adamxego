@@ -2,7 +2,7 @@ import { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { MAX_WIDTH, md } from "../styles/styles";
 import { Twitter } from "../utils/icons";
@@ -10,19 +10,20 @@ import { HeaderWrapper, FooterWrapper } from "./index";
 
 const Mint: NextPage = () => {
     const router = useRouter();
-    const [{ day, hour, minute, second }, setCountDown] = useState({
+    const [countDown, setCountDown] = useState({
         day: "00",
         hour: "00",
         minute: "00",
         second: "00",
     });
+    const dayRef = useRef<HTMLSpanElement>(null);
 
     // const { day, hour, min, sec } = calcTimeHandler();
 
     useEffect(() => {
         const calcTick = () => {
             const today = new Date();
-            const targetDay = new Date("2022-01-18 20:00:00");
+            const targetDay = new Date("2022-01-18T20:00:00");
 
             const gap = targetDay.getTime() - today.getTime();
 
@@ -33,10 +34,10 @@ const Mint: NextPage = () => {
 
             setCountDown({ day, hour, minute, second });
         };
-        const interval = setInterval(calcTick, 1000);
+        const interval = setTimeout(calcTick, 1000);
 
-        return () => clearInterval(interval);
-    }, []);
+        return () => clearTimeout(interval);
+    }, [countDown]);
     return (
         <>
             <Head>
@@ -94,16 +95,17 @@ const Mint: NextPage = () => {
                     <div id="countdown">
                         <ul>
                             <li>
-                                <span id="days">{day}</span>days
+                                <span id="days">{countDown.day}</span>
+                                days
                             </li>
                             <li>
-                                <span id="hours">{hour}</span>Hours
+                                <span id="hours">{countDown.hour}</span>Hours
                             </li>
                             <li>
-                                <span id="minutes">{minute}</span>Minutes
+                                <span id="minutes">{countDown.minute}</span>Minutes
                             </li>
                             <li>
-                                <span id="seconds">{second}</span>Seconds
+                                <span id="seconds">{countDown.second}</span>Seconds
                             </li>
                         </ul>
                     </div>
@@ -125,6 +127,7 @@ const Mint: NextPage = () => {
                                     <div className="growing-bar"></div>
                                 </div>
                             </div>
+                            <span className="amount">0 / 10000</span>
                         </div>
                     </article>
                     <button>Mint</button>
@@ -227,6 +230,8 @@ const MainWrapper = styled.div`
                 perspective-origin: 50% 50%;
                 -webkit-backface-visibility: visible;
                 backface-visibility: visible;
+
+                text-align: center;
 
                 ${md} {
                     width: 90%;
@@ -337,6 +342,14 @@ const MainWrapper = styled.div`
                                 height: 2rem;
                             }
                         }
+                    }
+                }
+
+                .amount {
+                    font-size: 1.75rem;
+
+                    ${md} {
+                        font-size: 0.75rem;
                     }
                 }
             }
