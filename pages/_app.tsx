@@ -2,8 +2,13 @@ import type { AppProps } from "next/app";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "../styles/styles";
 import themes from "../styles/themes";
+import AOS from "aos";
+
+import "aos/dist/aos.css"; // You can also use <link> for styles
+import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }: AppProps) {
+    useEffect(() => AOS.init(), []);
     return (
         <ThemeProvider theme={themes["dark"]}>
             <GlobalStyles />

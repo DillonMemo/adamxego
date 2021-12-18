@@ -56,7 +56,7 @@ const Home: NextPage = () => {
             <HeaderWrapper>
                 <div className="header">
                     <div className="start">
-                        <Link href="#">
+                        <Link href="/">
                             <a>
                                 <h2 className="logo" style={{ fontFamily: "Hind" }}>
                                     ADAM X EGO
@@ -76,6 +76,9 @@ const Home: NextPage = () => {
                         </Link>
                         <Link href="#team">
                             <a>Team</a>
+                        </Link>
+                        <Link href="/mint">
+                            <a>Mint</a>
                         </Link>
                         <div>
                             <select
@@ -99,7 +102,7 @@ const Home: NextPage = () => {
             </HeaderWrapper>
 
             <MainWrapper>
-                <section className="thumbnail-wrapper">
+                <section className="thumbnail-wrapper" data-aos="fade-down">
                     <img src="../static/img/main.png" alt="main" />
                 </section>
                 {/* <section className="arrow-wrapper">
@@ -114,7 +117,13 @@ const Home: NextPage = () => {
                 {/* <h2>Evil</h2>
                     </div>
                 </section> */}
-                <section id="about" className="about-wrapper" style={{ borderTop: "none" }}>
+                <section
+                    id="about"
+                    className="about-wrapper"
+                    style={{ borderTop: "none" }}
+                    data-aos="fade-right"
+                    data-aos-duration="2000"
+                >
                     <div>
                         <div className="about">
                             <div>
@@ -270,10 +279,10 @@ const Home: NextPage = () => {
                     </div> */}
                     </div>
                     {/* <div> */}
-                        {/* <span>GIF</span> */}
+                    {/* <span>GIF</span> */}
                     {/* </div> */}
                 </section>
-                <section className="roadmap-wrapper">
+                <section className="roadmap-wrapper" data-aos="fade-left" data-aos-duration="2000">
                     <h1 style={{ marginBottom: "1rem", fontFamily: "Hind" }}>Roadmap</h1>
                     <p
                         style={{
@@ -406,7 +415,7 @@ const Home: NextPage = () => {
                         </div>
                     </div>
                 </section>
-                <section className="gallery-wrapper">
+                <section className="gallery-wrapper" data-aos="fade-right" data-aos-duration="2000">
                     <div className="content">
                         <div className="img"></div>
                         <div className="img"></div>
@@ -429,6 +438,8 @@ const Home: NextPage = () => {
                 <section
                     className="chart-wrapper"
                     style={{ fontFamily: router.locale === "ko" ? "Nanum Gothic" : "Hind" }}
+                    data-aos="fade-left"
+                    data-aos-duration="2000"
                 >
                     <h1>{router.locale === "ko" ? "NFT 분배" : "NFT Distribution"}</h1>
                     <div>
@@ -488,6 +499,8 @@ const Home: NextPage = () => {
                 <section
                     className="team-wrapper"
                     style={{ fontFamily: router.locale === "ko" ? "Nanum Gothic" : "Hind" }}
+                    data-aos="fade-right"
+                    data-aos-duration="2000"
                 >
                     <h1>Team</h1>
                     <div className="content">
@@ -608,7 +621,7 @@ const Fade = keyframes`
     }
 `;
 
-const HeaderWrapper = styled.header`
+export const HeaderWrapper = styled.header`
     max-height: 3.75rem;
     width: 100%;
 
@@ -1115,7 +1128,7 @@ const MainWrapper = styled.div`
     }
 `;
 
-const FooterWrapper = styled.footer`
+export const FooterWrapper = styled.footer`
     max-width: ${MAX_WIDTH};
     margin: 0 auto;
     text-align: center;
