@@ -55,16 +55,16 @@ const Mint: NextPage = () => {
                         </Link>
                     </div>
                     <div className="end">
-                        <Link href="#about">
+                        <Link href="/#about">
                             <a>About</a>
                         </Link>
-                        <Link href="#roadmap">
+                        <Link href="/#roadmap">
                             <a>Roadmap</a>
                         </Link>
-                        <Link href="#gallery">
+                        <Link href="/#gallery">
                             <a>Gallery</a>
                         </Link>
-                        <Link href="#team">
+                        <Link href="/#team">
                             <a>Team</a>
                         </Link>
                         <Link href="/mint">

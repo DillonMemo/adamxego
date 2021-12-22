@@ -77,9 +77,9 @@ const Home: NextPage = () => {
                         <Link href="#team">
                             <a>Team</a>
                         </Link>
-                        <Link href="/mint">
+                        {/* <Link href="/mint">
                             <a>Mint</a>
-                        </Link>
+                        </Link> */}
                         <div>
                             <select
                                 name="lang"
