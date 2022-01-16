@@ -2,11 +2,16 @@ import { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect, useRef, useState } from "react";
+import { Component, useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { MAX_WIDTH, md } from "../styles/styles";
 import { Twitter } from "../utils/icons";
 import { HeaderWrapper, FooterWrapper } from "./index";
+import { utils } from "ethers";
+import MintContract from "../contracts/MintContract";
+import NFTContract from "../contracts/NFTContract";
+import ExtWallet from "../klaytn/ExtWallet";
+import Wallet from "../klaytn/Wallet";
 
 const Mint: NextPage = () => {
     const router = useRouter();
@@ -20,6 +25,32 @@ const Mint: NextPage = () => {
 
     // const { day, hour, min, sec } = calcTimeHandler();
 
+    useEffect (() => { 
+        const data = async () => {
+            const minted = 10000 - (await NFTContract.balanceOf(MintContract.address)).toNumber();   
+        };
+
+        const et = async () => {
+            if (await Wallet.connected() !== true) {
+                await Wallet.connect();
+            }
+        };
+
+        if (typeof window !== "undefined") {
+            data();
+            et();
+           }
+        
+        const fn = () => {
+         console.log('123')
+        }
+       
+        fn();
+       
+       }, [])
+
+       
+    
     useEffect(() => {
         const calcTick = () => {
             const today = new Date();
