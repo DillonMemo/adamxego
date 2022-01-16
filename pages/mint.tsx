@@ -22,35 +22,58 @@ const Mint: NextPage = () => {
         second: "00",
     });
     const dayRef = useRef<HTMLSpanElement>(null);
+    const [isConnected, setIsConnected] = useState<boolean>(false);
+    const [address, setAddress] = useState<string>("");
 
     // const { day, hour, min, sec } = calcTimeHandler();
 
-    useEffect (() => { 
+    /** 지갑 연결 로직 */
+    const WalletConnection = async () => {
+        const isConnection: boolean = await Wallet.connected();
+        if (!isConnection) {
+            await Wallet.connect();
+            setIsConnected(await Wallet.connected());
+        }
+    };
+
+    /** Connect 버튼 클릭 이벤트 핸들러 */
+    const onConnectWalletClick = () => WalletConnection();
+
+    useEffect(() => {
         const data = async () => {
-            const minted = 10000 - (await NFTContract.balanceOf(MintContract.address)).toNumber();   
+            const minted = 10000 - (await NFTContract.balanceOf(MintContract.address)).toNumber();
+        };
+        const initialize = async () => {
+            setIsConnected(await Wallet.connected());
         };
 
-        const et = async () => {
-            if (await Wallet.connected() !== true) {
-                await Wallet.connect();
+        // const et = async () => {
+        //     if ((await Wallet.connected()) !== true) {
+        //         await Wallet.connect();
+        //     }
+        // };
+
+        if (typeof Window !== "undefined") {
+            data();
+            // et();
+        }
+        initialize();
+    }, []);
+
+    useEffect(() => {
+        const contract = async () => {
+            if (typeof Window !== "undefined") {
+                const result = window.caver._provider.selectedAddress;
+                debugger;
+                setAddress(result);
             }
         };
-
-        if (typeof window !== "undefined") {
-            data();
-            et();
-           }
-        
-        const fn = () => {
-         console.log('123')
+        if (isConnected) {
+            debugger;
+            contract();
         }
-       
-        fn();
-       
-       }, [])
+    }, [isConnected]);
 
-       
-    
     useEffect(() => {
         const calcTick = () => {
             const today = new Date();
@@ -117,6 +140,13 @@ const Mint: NextPage = () => {
                                 <option value="en">EN</option>
                             </select>
                         </div>
+                    </div>
+                    <div className="btn-group">
+                        {address ? (
+                            <button disabled>{address}</button>
+                        ) : (
+                            <button onClick={onConnectWalletClick}>connect</button>
+                        )}
                     </div>
                 </div>
             </HeaderWrapper>
