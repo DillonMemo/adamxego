@@ -7,7 +7,7 @@ import styled from "styled-components";
 import { MAX_WIDTH, md } from "../styles/styles";
 import { Twitter } from "../utils/icons";
 import { HeaderWrapper, FooterWrapper } from "./index";
-import { utils } from "ethers";
+import { BigNumber, utils } from "ethers";
 import MintContract from "../contracts/MintContract";
 import NFTContract from "../contracts/NFTContract";
 import ExtWallet from "../klaytn/ExtWallet";
@@ -24,6 +24,7 @@ const Mint: NextPage = () => {
     const dayRef = useRef<HTMLSpanElement>(null);
     const [isConnected, setIsConnected] = useState<boolean>(false);
     const [address, setAddress] = useState<string>("");
+    const [klay, setKlayBalance] = useState<string>("");
 
     // const { day, hour, min, sec } = calcTimeHandler();
 
@@ -64,13 +65,24 @@ const Mint: NextPage = () => {
         const contract = async () => {
             if (typeof Window !== "undefined") {
                 const result = window.caver._provider.selectedAddress;
-                debugger;
+                // debugger;
                 setAddress(result);
+                
             }
         };
+        const klay = async () => {
+            if (typeof Window !== "undefined") {
+                // const number1 = new BigNumber(47248977375000000000);
+                const balance = BigNumber.from(await window.caver.klay.getBalance(window.caver._provider.selectedAddress));
+                const klay = utils.formatEther(balance);
+                // debugger;
+                setKlayBalance(klay);
+            }
+        }
         if (isConnected) {
-            debugger;
+            // debugger;
             contract();
+            klay();
         }
     }, [isConnected]);
 
@@ -101,7 +113,7 @@ const Mint: NextPage = () => {
             </Head>
             <HeaderWrapper>
                 <div className="header">
-                    <div className="start">
+                    <div className="start" style={{ marginRight: "auto" }}>
                         <Link href="/">
                             <a>
                                 <h2 className="logo">ADAM X EGO</h2>
@@ -141,11 +153,11 @@ const Mint: NextPage = () => {
                             </select>
                         </div>
                     </div>
-                    <div className="btn-group">
+                    <div className="btn-group" style= {{ marginLeft: "10px"}}>
                         {address ? (
-                            <button disabled>{address}</button>
+                            <button style={{ padding: "12px 20px", border: "1px solid rgb(112, 122, 131)", backgroundColor: "rgba(18,18,18,1)", color: "rgb(229, 232, 235)" }} disabled>{address}</button>
                         ) : (
-                            <button onClick={onConnectWalletClick}>connect</button>
+                            <button style={{ padding: "12px 20px", border: "1px solid rgb(112, 122, 131)", backgroundColor: "rgba(18,18,18,1)", color: "rgb(229, 232, 235)" }} onClick={onConnectWalletClick}>connect</button>
                         )}
                     </div>
                 </div>
@@ -153,7 +165,7 @@ const Mint: NextPage = () => {
 
             <MainWrapper>
                 <div className="wrapper">
-                    <div id="countdown">
+                    {/* <div id="countdown">
                         <ul>
                             <li>
                                 <span id="days">{countDown.day}</span>
@@ -167,6 +179,13 @@ const Mint: NextPage = () => {
                             </li>
                             <li>
                                 <span id="seconds">{countDown.second}</span>Seconds
+                            </li>
+                        </ul>
+                    </div> */}
+                    <div id="countdown">
+                        <ul>
+                            <li>
+                                Your Klay : {klay} Klay
                             </li>
                         </ul>
                     </div>
@@ -414,6 +433,13 @@ const MainWrapper = styled.div`
                     }
                 }
             }
+        }
+
+        .wallect-button {
+            padding: 12px 20px;
+            border: 1px solid rgb(112, 122, 131);
+            background-color: rgba(18,18,18,1);
+            color: rgb(229, 232, 235);
         }
 
         button {
